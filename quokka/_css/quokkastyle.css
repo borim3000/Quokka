@@ -1,0 +1,264 @@
+:root{
+    --blue: rgb(180, 222, 227);
+    --black_t: rgba(0, 0, 0, 0.258);
+    --turqoise: rgb(234, 255, 248);
+    --grey: rgb(81, 81, 81);
+    --orange: rgb(246, 198, 96);
+    --pink: rgb(244, 182, 168);
+}
+
+@import url(https://use.typekit.net/hdc5mif.css);
+
+body{
+    font-family: "agenda-one-condensed";
+    font-weight: 400;
+    color: var(--grey);
+    font-size: 20px;
+    background-color: var(--turqoise);
+}
+
+a {
+    text-decoration: none;
+    color: var(--grey)
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    flex:1;
+    z-index: 100;
+}
+
+.logo-img{
+    max-width: 80px;
+    height: auto;
+}
+
+.font-logo{
+    max-width: 370px;
+    min-width: 370px;
+    width: 20vw;
+    height: auto;
+    margin-top: 10px; margin-left: -30px; margin-bottom: -55px;
+}
+
+.login{
+    flex:1;
+}
+
+.top-bar{
+    min-height: 60px;
+    background-color: var(--blue);
+    width: 100%;
+    margin-bottom: -10px
+}
+
+.nav_links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+
+    padding-bottom: 20px;
+
+    font-size: 25px;
+    transform: translate(0px, 3px);
+}
+
+.nav_links li a{
+    position: relative;
+    display: inline-block;
+    color: var(--grey);
+    padding: 10px 15px;
+}
+
+
+
+.nav_links li a:hover::before, .aktiver_menulink::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: var(--blue);
+    z-index: -1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, main, footer {
+    width: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--blue);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.angebot_container{
+    display: grid;
+    gap: 10px;
+    padding: 2em;
+}
+
+.angebot{
+    display: block;
+    padding: 2em;
+    border-radius: 10px;
+    background-color: var(--blue);
+    font-family: "Kanit"; 
+    font-weight:600;
+    background-image: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition: height 0.7s cubic-bezier(.87, -0.2, .05, 1), filter .3s linear;
+    overflow: hidden;
+    height: 80px;
+}
+
+.angebot:hover {
+    height: 180px;
+    transition: height 0.7s cubic-bezier(.87, -0.2, .05, 1);
+  }
+
+.marker, .mini_marker{
+    display: inline-block;
+    background-color: var(--black_t);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    position: relative;
+    line-height: 0.5;
+}
+
+.marker{
+    line-height: 150%;
+    top: -20px;
+    left: -20px;
+    font-size: 30px;
+    font-family: "agenda-one-condensed";
+    font-weight: 600;
+}
+
+.mini_marker{
+    line-height: 50%;
+    top: -8px;
+    left: 0px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "agenda-one-condensed";
+    font-weight: 400;
+}
+
+@media (min-width: 1000px) {
+    .merch{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100vh;
+        margin-top: 10px;
+        }
+}
+
+.merch_item{
+    box-sizing: border-box;
+    width: 49%;
+    height: 45vh;
+    width: 45vh;
+    margin-bottom: 10px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.merch_text{
+    display: inline-block;
+    color: black;
+    padding: 3px 10px;
+    border-radius: 4px;
+    position: relative;
+    line-height: 150%;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .store_page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em;
+        gap: 20px;
+        height: auto;
+        }
+
+    .store_item{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+        margin: 10px 0;
+    }
+        
+    .store_item img {
+        flex-shrink: 0;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .store_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex: 1;
+    }
+    
+    .store_title{
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+        text-align: left;
+    }
+    
+    .store_text{
+        font-size: 20px;
+        margin: 0;
+        text-align: left;
+        font-weight: 100;
+    }
+}
+
