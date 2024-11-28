@@ -181,9 +181,8 @@ header, nav, main, footer {
 
     .nav_toggle_label{ /*burger menu icon*/
         position: fixed;
-        top: 30px;
+        top: 40px;
         right: 25px;
-        padding: 10px;
         cursor: pointer;
   
         display: flex;
@@ -191,7 +190,9 @@ header, nav, main, footer {
         align-items: center;
 
         z-index: 1001;
-        
+
+        background-color: var(--grey_low);
+        border-radius: 25px;
     }
 
     .nav_toggle:checked ~ .nav_links{
@@ -279,8 +280,16 @@ footer{
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 20px;
+
+
+    font-size: 25px;
+    font-weight: 200;
 }
 
+.footer_links{
+    list-style: none;
+
+}
 
 /*stuff für angebote*/
 
