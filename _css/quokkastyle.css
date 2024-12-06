@@ -466,12 +466,34 @@ footer{
     width: 110%; /* Füllt den gesamten Container aus */
     height: 100%;
     z-index: 0; /* Liegt hinter dem Formular */
+    display: flex; /* Ermöglicht die Zentrierung des Inhalts */
+    justify-content: center; /* Zentriert das Bild horizontal */
+    align-items: center; /* Zentriert das Bild vertikal */
 }
 
 .background-image img {
     width: 100%; /* Bild passt sich der Breite an */
     height: 100%; /* Bild passt sich der Höhe an */
     object-fit: cover; /* Schneidet das Bild korrekt zu */
+}
+
+/* Einstellungen für breitere Bildschirme (z. B. Laptops oder größere Displays) */
+@media screen and (min-width: 1024px) {
+    .background-image {
+        width: 100vw; /* Nimmt die gesamte Breite des Bildschirms */
+        height: 100vh; /* Nimmt die gesamte Höhe des Bildschirms */
+        display: flex; /* Ermöglicht das Zentrieren von Inhalten */
+        justify-content: center; /* Zentriert den Hintergrund horizontal */
+        align-items: center; /* Zentriert den Hintergrund vertikal */
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .background-image img {
+        width: auto; /* Bild behält seine Proportionen */
+        height: 100%; /* Passt die Höhe des Bildes an die Bildschirmhöhe an */
+        object-fit: contain; /* Bild bleibt vollständig sichtbar */
+    }
 }
 
 /* Login-Formular */
