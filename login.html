@@ -43,7 +43,46 @@
         </ul>
     </nav>
 
-    <main>
+    <main class="login-container">
+        <!-- Rosa Hintergrundbild -->
+        <div class="background-image">
+            <img src="img/Login/rosa-hintergrund.png" alt="Rosa Hintergrund">
+        </div>
+
+        <!-- Login-Formular mit Titel als Bild -->
+        <div class="login-form">
+            <!-- Titel des Login-Formulars als Bild -->
+            <img src="img/Login/Login.png" alt="Login Titel" class="login-title-image">
+
+            <!-- Beschreibungstext -->
+            <p class="login-description">
+                Melde dich hier an, um dich für spannende, kreative und aktive Angebote anzumelden. 
+                Lerne zudem eine Community aus Menschen aus der Arbeitswelt und Universitäten kennen. 
+                Wir freuen uns auf dich!
+            </p>
+
+            <!-- Login-Formular -->
+            <form action="/action_page.php" method="post">
+                <!-- Eingabefeld für Username -->
+                <label for="uname">Username</label>
+                <input type="text" placeholder="Username eingeben" name="uname" id="uname" required>
+
+                <!-- Eingabefeld für Passwort -->
+                <label for="password">Passwort</label>
+                <input type="password" placeholder="Passwort eingeben" name="password" id="password" required>
+
+                <!-- Anmeldebutton -->
+                <button type="submit">Anmelden</button>
+
+                <!-- Optionen: Angemeldet bleiben und Passwort vergessen -->
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="remember"> Angemeldet bleiben
+                    </label>
+                    <a href="#" class="forgot-password">Passwort vergessen?</a>
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer>

@@ -445,3 +445,116 @@ footer{
     }
 }
 
+/*stuff für Login*/
+/* Hintergrund und Hauptcontainer */
+.login-container {
+    position: relative; /* Ermöglicht die Platzierung des Hintergrundbildes */
+    display: flex; /* Zentriert den Inhalt */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    min-height: 100%; /* Nimmt 100% von gesamte Bildschirmhöhe ein */
+    background-color: #fdfdfd; /* Neutraler Hintergrund */
+    overflow: hidden; /* Verhindert das Überlaufen von Inhalten */
+    margin: 50px 0px; /* Abstand von Rosa Fläche zu Header*/
+}
+
+/* Hintergrundbild (rosa Form) */
+.background-image {
+    position: absolute; /* Fixiert das Bild im Container */
+    top: 0;
+    left: 0;
+    width: 110%; /* Füllt den gesamten Container aus */
+    height: 100%;
+    z-index: 0; /* Liegt hinter dem Formular */
+}
+
+.background-image img {
+    width: 100%; /* Bild passt sich der Breite an */
+    height: 100%; /* Bild passt sich der Höhe an */
+    object-fit: cover; /* Schneidet das Bild korrekt zu */
+}
+
+/* Login-Formular */
+.login-form {
+    position: relative; /* Formular liegt über dem Hintergrund */
+    padding: 30px; /* Innenabstand */
+    padding-bottom: 50px; /* Abstand von Passwort vergessen? zu rosa form*/
+    padding-top: 50px; /* Abstand von Login Titel auf Rosa Rand*/
+    width: 90%; /* Anpassbare Breite */
+    max-width: 400px; /* Maximale Breite */
+    z-index: 1; /* Vordergrund-Ebene */
+    text-align: center; /* Zentriert den Text */
+    margin-top: 150px;
+    margin-bottom: 250px;
+}
+
+/* Titelbild für Login */
+.login-title-image {
+    width: 60%; /* Passt sich der Breite des Formulars an */
+    max-width: 300px; /* Maximale Breite */
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+/* Beschreibungstext */
+.login-description {
+    font-size: 1rem; /* Standard-Schriftgröße */
+    color: #666; /* Graue Schrift */
+    margin-bottom: 20px; /* Abstand nach unten */
+    line-height: 1.5; /* Angenehmer Zeilenabstand */
+}
+
+/* Eingabefelder */
+form label {
+    display: block; /* Text oberhalb des Eingabefelds */
+    text-align: left; /* Links ausgerichtet */
+    margin: 10px 0 5px; /* Abstand zum Eingabefeld */
+    font-size: 0.9rem; /* Kleinere Schriftgröße */
+    color: #555; /* Dunkelgraue Farbe */
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 94%; /* Eingabefelder füllen die Breite */
+    padding: 10px; /* Innenabstand */
+    border: 1px solid #ccc; /* Grauer Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1rem; /* Standard-Schriftgröße */
+}
+
+/* Anmeldebutton */
+form button {
+    width: 100%; /* Button nimmt gesamte Breite */
+    padding: 10px; /* Innenabstand */
+    background-color: #612c2c; /* Dunkelrot */
+    color: #fff; /* Weiße Schriftfarbe */
+    border: none; /* Kein Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1rem; /* Schriftgröße */
+    font-weight: bold; /* Fettschrift */
+    cursor: pointer; /* Mauszeiger wird zur Hand */
+    margin: 20px 0; /* Abstand nach oben und unten */
+    transition: background-color 0.3s; /* Weicher Übergang bei Hover */
+}
+
+form button:hover {
+    background-color: #7d3c3c; /* Helleres Rot bei Hover */
+}
+
+/* Optionen: Checkbox und Link */
+.options {
+    display: flex; /* Elemente nebeneinander */
+    justify-content: space-between; /* Abstand dazwischen */
+    align-items: center; /* Vertikale Zentrierung */
+    font-size: 0.9rem; /* Kleinere Schriftgröße */
+}
+
+.options a {
+    color: #612c2c; /* Dunkelrote Links */
+    text-decoration: none; /* Keine Unterstreichung */
+}
+
+.options a:hover {
+    text-decoration: underline; /* Unterstreichung bei Hover */
+}
+
+    
