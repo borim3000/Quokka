@@ -888,4 +888,18 @@ form button:hover {
         grid-template-columns: 1fr; /* 1 Kachel pro Reihe auf sehr kleinen Bildschirmen */
     }
 }
-    
+  
+/* Styling für den Zurück-Button */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+.back-button:hover {
+    background-color: #333;
+}
