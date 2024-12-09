@@ -673,3 +673,24 @@ form button:hover {
 
 /*stuff für community*/
 
+.community-container{
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+    .Community_title img {
+        width: 60%; /* Passt sich der Breite des Formulars an */
+        max-width: 300px; /* Maximale Breite */
+        margin-bottom: 20px; /* Abstand nach unten */
+        justify-content: center;
+        margin: 0px 600px;
+    }
+
+    .community-intro-text{
+        font-size: 2rem; /* Standard-Schriftgröße */
+        color: #666; /* Graue Schrift */
+        margin: 0 auto 40px; /* Abstand nach unten */
+        line-height: 1.8; /* Angenehmer Zeilenabstand */
+        text-align: center;
+    }
