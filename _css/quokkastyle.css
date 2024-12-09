@@ -681,15 +681,17 @@ form button:hover {
         width: 90%;
         margin: 0 auto;
         padding: 50px;
+        display: flex; /* Flexbox aktivieren */
+        justify-content: center; /* Horizontale Zentrierung */
+        align-items: center; /* Vertikale Zentrierung */
+        text-align: center; /* Text zentrieren */
     }
 
     .Community_title img {
-        width: 60%; /* Passt sich der Breite des Formulars an */
-        max-width: 300px; /* Maximale Breite */
+        max-width: 100%; /* Bild passt sich der Breite des Containers an */
+        height: auto; /* Höhe wird proportional zur Breite angepasst */
         margin-bottom: 20px; /* Abstand nach unten */
-        justify-content: center;
-        margin: 0px 600px;
-    }
+    }   
 
     .community-intro-text{
         font-size: 2rem; /* Standard-Schriftgröße */
@@ -712,12 +714,13 @@ form button:hover {
         color: #333;
         margin: 40px auto;
         padding: 100px;
-        background-size: contain; /* Passt die PNGs an */
-        background-position: center;
+        background-size: 120%; /* Standardgröße */
+        background-position: center; /* Zentriert die Form */
         background-repeat: no-repeat;
         position: relative;
-        min-height: 250px; /* Mindesthöhe für die Blasen */
-      }
+        min-height: 250px;
+        }
+
 
       .quote-container:first-child {
         margin-top: 10px; /* Weniger Abstand zum vorherigen Inhalt */
@@ -751,16 +754,138 @@ form button:hover {
         z-index: 1; /* Hintergrund bleibt hinter dem Text */
     }
 
+    /* Für Bildschirme kleiner als 768px (Tablets) */
+    @media (max-width: 768px) {
+        .quote-container {
+            background-size: 200px; /* Mindestgröße für kleine Bildschirme */
+        }
+    }
+
+    /* Für sehr kleine Bildschirme (Smartphones) */
+    @media (max-width: 480px) {
+        .quote-container {
+            background-size: 150px; /* Noch kleinere Mindestgröße für sehr kleine Bildschirme */
+        }
+
+    }
+
       .quote-container:nth-child(odd) {
         background-image: url('../img/community/rot-form.png'); /* Roter Hintergrund */
         background-size: 60%; /* Vergrößert die Form auf 60% ihrer Originalgröße */
-        background-position: center; /* Zentriert die Form */
-        background-repeat: no-repeat; /* Verhindert Wiederholung */
+       
     }
     
     .quote-container:nth-child(even) {
         background-image: url('../img/community/blau-form.png'); /* Blauer Hintergrund */
         background-size: 60%; /* Vergrößert die Form auf 60% ihrer Originalgröße */
-        background-position: center; /* Zentriert die Form */
-        background-repeat: no-repeat; /* Verhindert Wiederholung */
+
     }
+
+    .friendlist-btn-container {
+        text-align: center;
+        margin: 40px 0; /* Abstand zum oberen und unteren Inhalt */
+    }
+    
+    .friendlist-btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #333; /* Blaue Hintergrundfarbe */
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+        border-radius: 5px; /* Abgerundete Ecken */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .friendlist-btn:hover {
+        background-color: #333; /* Etwas dunkler beim Hover */
+        transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+    }
+    
+    .friendlist-btn:active {
+        background-color: #333; /* Noch dunkler bei Klick */
+    }
+
+    /* Gesamtcontainer für die Kacheln */
+.friendlist-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Kacheln pro Reihe */
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Jede Freundes-Kachel */
+.friend-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Profilbild links oben */
+.friend-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Bereich für die Informationen des Freundes */
+.friend-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Name, Beruf und Kurse */
+.friend-details p {
+    margin: 5px 0;
+}
+
+.name {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.job {
+    font-size: 1rem;
+    color: #555;
+}
+
+.courses {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Chat-Icon */
+.chat-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chat-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsives Layout für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .friendlist-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 Kacheln pro Reihe auf kleineren Bildschirmen */
+    }
+}
+
+@media (max-width: 480px) {
+    .friendlist-container {
+        grid-template-columns: 1fr; /* 1 Kachel pro Reihe auf sehr kleinen Bildschirmen */
+    }
+}
+    
