@@ -636,12 +636,16 @@ form button:hover {
 }
 
 .icons {
-    position: absolute;
+    position: absolute; 
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    margin-bottom: 200px;
 }
 
 .icons img:hover {
