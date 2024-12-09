@@ -701,10 +701,7 @@ form button:hover {
 
       
     .quotes-section {
-        
-        background-size: cover;
-        background-position: center;
-        padding: 50px 20px; /* Abstand um den Bereich */
+        padding: 50px 20px;
       }
 
 
@@ -713,13 +710,13 @@ form button:hover {
         max-width: 600px;
         line-height: 1.6;
         color: #333;
-        margin: 20px auto; /* Weniger Abstand zwischen den Zitaten */ /* Ändert sich hier */
-        padding: 30px; /* Mehr Platz innerhalb der Zitate */ /* Ändert sich hier */
-        background-image: img="img/community/rosa-hintergrund.png" /* Hintergrundbild für jedes Zitat */
-        background-size: cover; /* Hintergrundbild skaliert automatisch */
-        background-position: center; /* Hintergrund wird zentriert */
-        background-repeat: no-repeat; /* Hintergrund wird nicht wiederholt */
-        border-radius: 10px; /* Runde Ecken für das Zitat */
+        margin: 40px auto;
+        padding: 100px;
+        background-size: contain; /* Passt die PNGs an */
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        min-height: 250px; /* Mindesthöhe für die Blasen */
       }
 
       .quote-container:first-child {
@@ -731,6 +728,8 @@ form button:hover {
         color: #666; /* Graue Schrift */
         font-size: 24px;
         font-style: italic;
+        position: relative;
+        z-index: 2; /* Text liegt über dem Hintergrundbild */
       }
       
       .author {
@@ -738,12 +737,30 @@ form button:hover {
         color: #666; /* Graue Schrift */
         margin-top: 10px;
         font-size: 18px;
+        position: relative;
+        z-index: 2; /* Text liegt über dem Hintergrundbild */
       }
 
-    .quote-container:nth-child(odd) {
-        text-align: left; /* Zitate in ungeraden Containern linksbündig */
+      .quote-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1; /* Hintergrund bleibt hinter dem Text */
     }
 
+      .quote-container:nth-child(odd) {
+        background-image: url('../img/community/rot-form.png'); /* Roter Hintergrund */
+        background-size: 60%; /* Vergrößert die Form auf 60% ihrer Originalgröße */
+        background-position: center; /* Zentriert die Form */
+        background-repeat: no-repeat; /* Verhindert Wiederholung */
+    }
+    
     .quote-container:nth-child(even) {
-        text-align: right; /* Zitate in geraden Containern rechtsbündig */
-      }
+        background-image: url('../img/community/blau-form.png'); /* Blauer Hintergrund */
+        background-size: 60%; /* Vergrößert die Form auf 60% ihrer Originalgröße */
+        background-position: center; /* Zentriert die Form */
+        background-repeat: no-repeat; /* Verhindert Wiederholung */
+    }
