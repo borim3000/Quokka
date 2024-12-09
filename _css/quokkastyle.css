@@ -586,12 +586,23 @@ form button:hover {
     padding: 50px;
 }
 
+.title-container {
+    padding: 30px; /* Innenabstand */
+    padding-bottom: 30px; /* Abstand von Passwort vergessen? zu rosa form*/
+    padding-top: 30px; /* Abstand von Login Titel auf Rosa Rand*/
+    width: 90%; /* Anpassbare Breite */
+    max-width: 600px; /* Maximale Breite */
+    text-align: center; /* Zentriert den Text */
+    margin: 20px auto;
+    position: relative;
+    justify-content: center;
+}
+
 .ueberquokka-title-image img {
     width: 60%; /* Passt sich der Breite des Formulars an */
     max-width: 300px; /* Maximale Breite */
     margin-bottom: 20px; /* Abstand nach unten */
     justify-content: center;
-    margin: 0px 600px;
 }
 
 .ueberquokka-intro-text{
@@ -657,7 +668,6 @@ form button:hover {
     max-width: 300px; /* Maximale Breite */
     margin-bottom: 20px; /* Abstand nach unten */
     justify-content: center;
-    margin: 0px 600px;
 }
 
 
