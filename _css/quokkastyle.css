@@ -519,7 +519,7 @@ footer{
 
 /* Beschreibungstext */
 .login-description {
-    font-size: 1rem; /* Standard-Schriftgröße */
+    font-size: 1.2rem; /* Standard-Schriftgröße */
     color: #666; /* Graue Schrift */
     margin-bottom: 20px; /* Abstand nach unten */
     line-height: 1.5; /* Angenehmer Zeilenabstand */
@@ -595,10 +595,10 @@ form button:hover {
 }
 
 .ueberquokka-intro-text{
-    font-size: 2rem; /* Standard-Schriftgröße */
+    font-size: 1.2rem; /* Standard-Schriftgröße */
     color: #666; /* Graue Schrift */
     margin: 0 auto 40px; /* Abstand nach unten */
-    line-height: 1.8; /* Angenehmer Zeilenabstand */
+    line-height: 1.5; /* Angenehmer Zeilenabstand */
     text-align: center;
 }
 
