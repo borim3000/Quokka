@@ -580,6 +580,7 @@ form button:hover {
 }
 
 
+
 .ueberquokka-container{
     width: 90%;
     margin: 0 auto;
@@ -627,25 +628,54 @@ form button:hover {
     margin-bottom: 20px;
 }
 
+.team-member-content{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
 .team-member img {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     display: block; 
     border-radius: 10px;
+    position: relative; /* Ermöglicht die Überlagerung durch die Icons */
 }
 
 .icons {
-    position: absolute; 
-    bottom: -20px;
-    left: 50%;
+    position: absolute;
+    bottom: 200px;
+    left: 60%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    width: 120px;
-    height: 120px;
-    margin-top: 10px;
-    margin-bottom: 200px;
+    justify-content: center;
+    z-index: 10;
+}
+
+.icons-left {
+    position: absolute;
+    bottom: 200px;
+    left: 45%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    z-index: 10;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+.icons-left img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
 }
 
 .icons img:hover {
@@ -661,11 +691,56 @@ form button:hover {
    margin-top: 40px;
 }
 
-.quote img {
-    width: 100%;
+.quote {
+    position: relative;
+    text-align: center;
     max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.quote-background img {
+    width: 100%;
     display: block;
-    margin: 0 auto;
+}
+
+.quote-title {
+    font-size: clamp(1.5rem, 2vw, 4rem); /* Dynamische Schriftgröße */
+    font-weight: bolder;
+    font-style: normal;
+    color: #333;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    line-height: 1.4rem;
+    width: 80%;
+}
+
+.quote-text-ueberquokka {
+    font-size: clamp(1.2rem, 1.8vw, 3rem); /* Dynamische Schriftgröße */
+    font-weight: lighter;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    line-height: clamp(1.5rem, 2.5vw, 4rem); /* Dynamisches Zeilenverhältnis */
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .quote-title {
+        font-size: 2.5rem;
+        top: 80px;
+    }
+
+    .quote-text-ueberquokka {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 }
 
 .quokka-title-image img {
