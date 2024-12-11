@@ -781,63 +781,69 @@ form button:hover {
 
 .team-member {
     position: relative;
-    width: 48%;
+    width: calc(50% - 10px);
     text-align: center;
     margin-bottom: 20px;
 }
 
-.team-member-content{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-}
-
 .team-member img {
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 100%;
     display: block; 
     border-radius: 10px;
     position: relative; /* Ermöglicht die Überlagerung durch die Icons */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
 }
 
 .icons {
     position: absolute;
-    bottom: 200px;
+    bottom: 15%; /* Fixierte Position relativ zum unteren Rand des Bildes */
     left: 60%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    justify-content: center;
-    z-index: 10;
 }
 
 .icons-left {
     position: absolute;
-    bottom: 200px;
+    bottom: 15%; /* Fixierte Position relativ zum unteren Rand des Bildes */
     left: 45%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    justify-content: center;
-    z-index: 10;
 }
 
 .icons img {
-    width: 30px;
-    height: 30px;
+    width: clamp(25px, 5vw, 50px); /* Dynamische Größenanpassung */
+    height: auto;
     padding: 5px;
+    transition: transform 0.2s; /* Animation beim Hover */
 }
 
 .icons-left img {
-    width: 30px;
-    height: 30px;
+    width: clamp(25px, 5vw, 50px); /* Dynamische Größenanpassung */
+    height: auto;
     padding: 5px;
+    transition: transform 0.2s; /* Animation beim Hover */
 }
 
 .icons img:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 750px) {
+    .team-section {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .icons {
+        bottom: 10%;
+    }
 }
 
 
