@@ -70,11 +70,38 @@ header{
         margin-left: 20px; margin-right: 20px;
         border-radius: 25px;
     }
+
+    .menu_icons{     /* search & login icons*/
+        float: right;
+        padding: 20px;
+        display: flex;
+    }
+
+    .menu_icons img {
+        height: 50px;
+        margin: 10px;
+        transform: translate(170px, 15px);
+
+        transform-origin: top right;
+        transition: transform 0.3s ease;
+    }
+
+    .menu_icons img:hover{
+        transform: translate(173px, 10px) scale(1.15);
+    }
+
+    .top-bar-form{
+        opacity: 70%;
+        float: right;
+        transform: translate(-20px, 30px);
+        height: 80px;
+    }
 }
 
 .nav_links{ /*nav menu tabs*/
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
     margin: 0;
     padding: 0;
@@ -171,18 +198,14 @@ header, nav, main, footer {
         line-height: 0.9;
     }
 
-    .nav_links li a:hover::before, .aktiver_menulink::before {
-        height: 25px;
-    }
-
     .nav_toggle{
         display: none;
     }
 
     .nav_toggle_label{ /*burger menu icon*/
         position: fixed;
-        top: 40px;
-        right: 25px;
+        top: 35px;
+        right: 21px;
         cursor: pointer;
   
         display: flex;
@@ -193,6 +216,7 @@ header, nav, main, footer {
 
         background-color: var(--grey_low);
         border-radius: 25px;
+
     }
 
     .nav_toggle:checked ~ .nav_links{
@@ -201,18 +225,16 @@ header, nav, main, footer {
 
     .nav_links li a:hover::before, .aktiver_menulink::before {
 
-
+        height: 25px;
         background-color: var(--grey_mid);
         z-index: -1;
         border-radius: 8px;
         padding: 18px;
-        margin-left: 50px; margin-right: 50px
-
     }
 
     .dropdown_menu{
         position: fixed;
-        top: 100px;
+        top: 90px;
         left: 20px;
         width: calc(100% - 40px);
         padding-top: 40px;
@@ -220,6 +242,8 @@ header, nav, main, footer {
 
         background-color: var(--grey_low);
         border-radius: 15px;
+
+        transform: translate(0, -5px);
     }
 
     .smooth_line{
@@ -243,15 +267,27 @@ header, nav, main, footer {
 
     }
 
+    .nav_extras img {
+        transform: translate(-20px, 10px);
+    }
+
     .grey_bg{
         background-color: var(--grey_mid);
         border-radius: 15px;
         padding-top: 5px;
         padding-left: 40px; padding-right: 40px;
     }
+
+    .menu_icons{
+        display: none;
+    }
+
+    .top-bar-form{
+        display: none;
+    }
 }
 
-@media (min-width: 751px){ /*das macht, dass dropdownmenu bei breiteren bildschirmen nicht sichtbar ist*/
+@media (min-width: 750px){ /*das macht, dass dropdownmenu bei breiteren bildschirmen nicht sichtbar ist*/
     .nav_toggle_label{
         display:none;
     }
@@ -270,25 +306,147 @@ main {
 }
 
 
-/*footer*/
+/*footer für mobile*/
 
-footer{
-    width: 100%;
-    background-color: var(--grey_low);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 20px;
+@media(max-width: 750px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        background-color: var(--grey_low);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
 
 
-    font-size: 25px;
-    font-weight: 200;
+        font-size: 25px;
+        font-weight: 200;
+    }
+
+    .footer_links{
+        font-size: 35px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quokka_social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quokka_social img {
+        height: 8em;
+        padding: 20px;
+    }
+
+    .social_icons{
+        display: flex;
+        flex-direction: row;
+        margin-top: -155px;
+        padding-bottom: 2em;
+    }
+
+    .social_icons img {
+        height: 3em;
+        width: auto;
+        margin: 0 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .social_icons img:hover{
+        transform: scale(1.15);
+    }
+
+    .line_footer{
+        width: 90px;
+        height: 5px;
+        background-color: var(--grey_mid);
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 10px; margin-bottom: 10px;
+    }
 }
 
-.footer_links{
-    list-style: none;
+/*footer für desktop*/
 
+@media(min-width: 750px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        background-color: var(--grey_low);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+
+
+        font-size: 25px;
+        font-weight: 200;
+    }
+
+    .footer_links{
+        font-size: 35px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .quokka_social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quokka_social img {
+        height: 7em;
+        padding: 20px;
+    }
+
+    .social_icons{
+        display: flex;
+        flex-direction: row;
+        margin-top: -140px;
+        padding-bottom: 2em;
+    }
+
+    .social_icons img {
+        height: 2.5em;
+        width: auto;
+        margin: 0 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .social_icons img:hover{
+        transform: scale(1.15);
+    }
+
+    .line_footer{
+        width: 90px;
+        height: 5px;
+        background-color: var(--grey_mid);
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 10px; margin-bottom: 10px;
+    }
+
+    .footer_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
 }
 
 /*stuff für angebote*/
