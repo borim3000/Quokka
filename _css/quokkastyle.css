@@ -70,6 +70,32 @@ header{
         margin-left: 20px; margin-right: 20px;
         border-radius: 25px;
     }
+
+    .menu_icons{     /* search & login icons*/
+        float: right;
+        padding: 20px;
+        display: flex;
+    }
+
+    .menu_icons img {
+        height: 50px;
+        margin: 10px;
+        transform: translate(170px, 15px);
+
+        transform-origin: top right;
+        transition: transform 0.3s ease;
+    }
+
+    .menu_icons img:hover{
+        transform: translate(173px, 10px) scale(1.15);
+    }
+
+    .top-bar-form{
+        opacity: 70%;
+        float: right;
+        transform: translate(-20px, 30px);
+        height: 80px;
+    }
 }
 
 .nav_links{ /*nav menu tabs*/
@@ -250,6 +276,14 @@ header, nav, main, footer {
         border-radius: 15px;
         padding-top: 5px;
         padding-left: 40px; padding-right: 40px;
+    }
+
+    .menu_icons{
+        display: none;
+    }
+
+    .top-bar-form{
+        display: none;
     }
 }
 
