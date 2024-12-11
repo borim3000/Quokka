@@ -48,8 +48,33 @@
         </ul>
     </nav>
 
-    <main style="padding: 200px">
-        WHAT ARE YOU LOOKING FOR?
+    <main>
+        <div class="search_container">
+            <img src="/img/formen/form-gelb.png" alt="quokkaform" class="search_form">
+            <p class="search_title">Suche</p>
+
+            <div class="line_search"></div>
+        </div>
+
+        <div class="search_text">
+            <p>Was interessiert dich heute? Finde spannende Inhalte auf unserer Seite!</p>
+        </div>
+
+        <div class="search_bar_container">
+            <img src="/img/formen/form-blau-3.png" alt="quokkaform">
+
+            <div class="search_bar_text">
+                Was suchst du?
+            </div>
+
+        <form class="search_combine" action="/index.html" method="GET">
+            <input type="text" name="query" class="search_bar" placeholder="Hier schreiben..." required>
+            <button type="submit" class="search_button">Suchen</button>
+        </form>
+            
+
+        </div>
+
     </main>
 
     <footer>
