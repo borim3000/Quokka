@@ -1431,3 +1431,386 @@ form button:hover {
     }
 
 }
+
+/*STUFF FÜR HOME*/
+
+/*für desktop*/
+
+@media (min-width: 750px){
+
+    .welcome_container{             /*willkommen bei quokka*/
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 170px auto;
+
+        position: relative;
+        height: 150px;
+        width: 300px;
+    }
+
+    .home_form{
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        margin-top: -140px;
+    }
+
+    .home_welcome{
+        position: relative;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 800;
+        margin-top: -80px;
+
+    }
+
+    .home_container_0{              /*work-life-balance*/
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        position: relative;
+        max-width: 1500px;
+        height: 250px;
+
+        margin-top: -120px;
+    }
+
+    .home_form_0{
+        position: relative;
+        width: 350px;
+        height: 50%;
+        opacity: 80%;
+
+    }
+
+    .home_title_0{
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        margin-top: 35px;
+    }
+
+    .home_text_0{
+        position: absolute;
+        text-align: center;
+        margin-top: 150px;
+        width: 730px;
+
+        font-size: 30px;
+    }
+
+    .home_container_1{              /*rechte seite der bubbles*/
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        position: relative;
+        max-width: 1500px;
+
+        margin: 100px;
+        margin-left: 450px;
+
+    }
+
+    .home_form_1{
+        position: relative;
+        width: 550px;
+        height: 100%;
+
+        transform: translate(40px);
+    }
+
+    .home_title_1{
+        position: absolute;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        
+        margin-top: 30px;
+        margin-left: -150px;
+
+    }
+
+    .home_subtitle_1{
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+
+        margin-top: 130px;
+        margin-left: -130px;
+
+    }
+
+    .home_text_1{
+        position: absolute;
+        text-align: center;
+        margin-top: 230px;
+        margin-left: -100px;
+
+        width: 400px;
+        font-size: 35px;
+    }
+
+    .home_icon_1{
+        position: relative;
+        width: 100px;
+        height: 100%;
+
+        transform: translate(-170px, -30px);
+    }
+
+    .home_container_2{              /*linke seite der bubbles*/
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        position: relative;
+        max-width: 1500px;
+
+        margin: 100px;
+        margin-right: 400px;
+        margin-top: -85px;
+        margin-bottom: -120px;
+    }
+
+    .home_form_2{
+        position: relative;
+        width: 700px;
+        height: 100%;
+
+        transform: translateY(-30px);
+    }
+
+    .home_title_2{
+        position: absolute;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        
+        margin-top: 30px;
+        margin-right: -150px;
+
+    }
+
+    .home_subtitle_2{
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+
+        margin-top: 130px;
+        margin-right: -150px;
+
+    }
+
+    .home_text_2{
+        position: absolute;
+        text-align: center;
+        margin-top: 230px;
+        margin-right: -120px;
+
+        width: 500px;
+        font-size: 35px;
+    }
+
+    .home_icon_2{
+        position: relative;
+        width: 100px;
+        height: 100%;
+
+        transform: translate(-480px, -20px);
+    }
+}
+
+/*für mobile*/
+
+@media (max-width: 750px){
+
+    .welcome_container{             /*willkommen bei quokka*/
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 200px auto;
+
+        position: relative;
+        height: 150px;
+        width: 300px;
+    }
+
+    .home_form{
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        margin-top: -100px;
+    }
+
+    .home_welcome{
+        position: relative;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 800;
+        margin-top: -50px;
+
+    }
+
+    .home_container_0{              /*work-life-balance*/
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        position: relative;
+        max-width: 1500px;
+        height: 250px;
+
+        margin-top: -80px;
+        margin-bottom: 200px;
+
+    }
+
+    .home_form_0{
+        position: relative;
+        width: 350px;
+        height: 50%;
+        opacity: 80%;
+
+    }
+
+    .home_title_0{
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        margin-top: 35px;
+    }
+
+    .home_text_0{
+        position: absolute;
+        text-align: center;
+        margin-top: 150px;
+        width: 410px;
+
+        font-size: 33px;
+    }
+
+    .home_container_1{              /*rechte seite der bubbles*/
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        position: relative;
+        max-width: 1500px;
+
+        margin: 120px;
+
+    }
+
+    .home_form_1{
+        position: relative;
+        width: 550px;
+        height: 100%;
+
+        transform: translate(40px);
+    }
+
+    .home_title_1{
+        position: absolute;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        
+        margin-top: 30px;
+        margin-left: -120px;
+
+    }
+
+    .home_subtitle_1{
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+
+        margin-top: 130px;
+        width: 350px;
+
+    }
+
+    .home_text_1{
+        position: absolute;
+        text-align: center;
+        margin-top: 230px;
+
+        width: 400px;
+        font-size: 35px;
+    }
+
+    .home_icon_1{
+        position: relative;
+        width: 100px;
+        height: 100%;
+
+        transform: translate(-170px, -30px);
+    }
+
+    .home_container_2{              /*linke seite der bubbles*/
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        position: relative;
+        max-width: 1500px;
+
+        margin: 100px;
+        margin-top: -85px;
+        margin-bottom: -120px;
+    }
+
+    .home_form_2{
+        position: relative;
+        width: 700px;
+        height: 100%;
+
+        transform: translateY(-30px);
+    }
+
+    .home_title_2{
+        position: absolute;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        
+        margin-top: 30px;
+        margin-right: -100px;
+    }
+
+    .home_subtitle_2{
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+
+        margin-top: 130px;
+        width: 350px;
+
+    }
+
+    .home_text_2{
+        position: absolute;
+        text-align: center;
+        margin-top: 200px;
+
+        width: 350px;
+        font-size: 35px;
+    }
+
+    .home_icon_2{
+        position: relative;
+        width: 100px;
+        height: 100%;
+
+        transform: translate(-505px, -20px);
+    }
+}
