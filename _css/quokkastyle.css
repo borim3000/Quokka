@@ -1209,43 +1209,32 @@ form button:hover {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
         margin: auto;
-
+        margin-top: -20px;
+        margin-bottom: 50px;
         position: relative;
-        margin-top: 200px;
-        margin-bottom: 250px;
-    }
+        width: 100%;
+        min-height: 550px;
+        max-width: 1000px;
+        max-height: 1000px;
 
-    .search_bar_container img{
-        position: absolute;
-        max-width: 100%;
-        width: 100px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
+        background-image: url(/img/formen/form-blau-4.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 800px;
+        overflow: hidden;
+
     }
 
     .search_bar_text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        position: relative;
-        text-align: center;
-        margin: auto;
         font-size: 40px;
         font-weight: 300;
-        margin-top: -10px;
+
+        margin-top: 30px;
     }
-
     .search_bar{
-        position: relative;
-        margin: auto;
-
-        width: 500px;
-        height: 100%;
-        padding: 10px 20px;
         border: 2px solid var(--grey_mid);
         border-radius: 10px;
         font-size: 18px;
@@ -1255,31 +1244,32 @@ form button:hover {
         background-color: rgba(255, 255, 255, 0.8);
         color: var(--grey);
 
-        margin-bottom: 20px;
-        margin-top: 20px;
+        max-width: 400px;
     }
 
     .search_button{
-    
+
+        max-width: 250px;
+        width: 60%;
+
         font-size: 30px;
         font-weight: 600;
         background-color: var(--darkred);
         color: white !important; 
-        padding: 10px;
         border-radius: 10px;
-        width: 200px;
 
-        position: relative;
-        text-align: center;
-        margin: auto;
+
     }
 
     .search_combine{
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 15px;
-        width: 500px;
+        text-align: center;
+        flex-direction: column;
+
+        width: 70%;
+        
+        margin-top: 30px;
     }
 
     
@@ -1334,8 +1324,10 @@ form button:hover {
 
         position: relative;
         text-align: center;
-        width: 400px;
+        min-width: 300px;
+        max-width: 500px;
         margin: 80px auto;
+        padding: 20px;
         font-size: 33px;
         font-weight: 300;
     }
@@ -1345,79 +1337,65 @@ form button:hover {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
         margin: auto;
-
+        margin-top: -100px;
         position: relative;
-        max-width:2000px;
-        margin-top: 200px;
-        margin-bottom: 250px;
-    }
+        width: 100%;
+        min-height: 500px;
+        max-width: 1000px;
+        max-height: 1000px;
 
-    .search_bar_container img{
-        position: absolute;
-        width: 1000px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
+        background-image: url(/img/formen/form-blau-4.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 700px;
+        overflow: hidden;
+
     }
 
     .search_bar_text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        position: relative;
-        text-align: center;
-        margin: auto;
-        font-size: 60px;
+        font-size: 40px;
         font-weight: 300;
-        margin-top: -10px;
+
     }
 
     .search_bar{
-        position: relative;
-        margin: auto;
-
-        width: 100%;
-        max-width: 350px;
-        height: 50px;
-        padding: 10px 20px;
         border: 2px solid var(--grey_mid);
         border-radius: 10px;
-        font-size: 25px !important;
+        font-size: 18px;
         font-weight: 300;
         outline: none;
         z-index: 1;
         background-color: rgba(255, 255, 255, 0.8);
         color: var(--grey);
 
-        margin-bottom: 20px;
-        margin-top: 20px;
+        width: 300px;
     }
 
     .search_button{
-    
-        font-size: 40px;
+        
+        width: 60%;
+
+        font-size: 30px;
         font-weight: 600;
         background-color: var(--darkred);
-        color: white; 
-        padding: 10px;
+        color: white !important; 
         border-radius: 10px;
-        width: 250px;
 
-        position: relative;
-        text-align: center;
-        margin: auto;
+
     }
 
     .search_combine{
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 15px;
-        width: 100%;
-        max-width: 500px;
+        text-align: center;
+        flex-direction: column;
+
+        width: 70%;
+        
+        margin-top: 20px;
     }
 
 }
@@ -2028,3 +2006,4 @@ form button:hover {
     }
 
 }
+
