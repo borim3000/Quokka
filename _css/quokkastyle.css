@@ -1238,18 +1238,6 @@ form button:hover {
     color: #777;
 }
 
-/* Chat-Icon */
-.chat-icon {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.chat-icon img {
-    width: 30px;
-    height: 30px;
-}
-
 /* Responsives Layout für kleinere Bildschirme */
 @media (max-width: 768px) {
     .friendlist-container {
