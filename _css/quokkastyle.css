@@ -1064,7 +1064,7 @@ form button:hover {
     .Community_title img {
         max-width: 100%; /* Bild passt sich der Breite des Containers an */
         height: auto; /* Höhe wird proportional zur Breite angepasst */
-        margin-bottom: 20px; /* Abstand nach unten */
+        margin-bottom: 100px; /* Abstand nach unten */
     }   
 
     .community-intro-text{
