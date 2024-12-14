@@ -1251,24 +1251,17 @@ form button:hover {
     }
 }
   
-/* Styling für den Zurück-Button */
-.back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-top: 20px;
-}
-.back-button:hover {
-    background-color: #333;
+    
+   /* Container für die Buttons */
+.action-button-container {
+    display: flex;               /* Setzt Flexbox für die Buttons */
+    justify-content: center;     /* Zentriert die Buttons */
+    gap: 15px;                   /* Abstand zwischen den Buttons */
+    margin-top: 20px;             /* Abstand nach oben */
 }
 
-/* Styling für die neuen Buttons (Anfragen, Chat) */
+/* Styling für die einzelnen Buttons */
 .action-button {
-    display: inline-block;
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -1277,19 +1270,15 @@ form button:hover {
     font-size: 1rem;
     text-align: center;
     transition: background-color 0.3s ease;
+    width: 150px;                /* Einheitliche Breite für alle Buttons */
+    border: none;                /* Keine Ränder um die Buttons */
 }
 
+/* Beispiel für Hover-Effekt */
 .action-button:hover {
-    background-color: #555; /* Hellerer Farbton für Hover-Effekt */
+    background-color: #555;
 }
 
-/* Styling für die Container der Buttons */
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Abstand zwischen den Buttons */
-    margin-top: 20px;
-}
 
 /*SEARCH PAGE*/
 
