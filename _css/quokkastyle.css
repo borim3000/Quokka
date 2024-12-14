@@ -1163,7 +1163,7 @@ form button:hover {
     .friendlist-btn {
         display: inline-block;
         padding: 15px 30px;
-        background-color: #333; /* Blaue Hintergrundfarbe */
+        background-color: #333;
         color: white;
         font-size: 1.2rem;
         text-decoration: none;
@@ -1252,12 +1252,30 @@ form button:hover {
 }
   
     
-   /* Container für die Buttons */
+ /* Container für den "Zurück"-Button */
+.zurück-button-container {
+    display: flex;                /* Flexbox für die Buttons */
+    justify-content: center;      /* Horizontal zentrieren */
+    align-items: center;          /* Vertikal zentrieren */
+    gap: 15px;                    /* Abstand zwischen den Buttons */
+    margin-top: 50px;             /* Abstand nach oben, anpassen, um ihn unter den Kacheln zu platzieren */
+    margin-bottom: 80px;          /* Mehr Abstand nach unten */
+    width: 100%;                  /* Container nimmt die volle Breite ein */
+    position: relative;           /* Relative Positionierung für bessere Platzierung */
+    top: 0;                       /* Kein Offset erforderlich */
+}
+
+/* Container für die Buttons "Anfragen" & "Chat" */
 .action-button-container {
-    display: flex;               /* Setzt Flexbox für die Buttons */
-    justify-content: center;     /* Zentriert die Buttons */
-    gap: 15px;                   /* Abstand zwischen den Buttons */
-    margin-top: 20px;             /* Abstand nach oben */
+    display: flex;                /* Setzt Flexbox für die Buttons */
+    justify-content: center;      /* Horizontal zentrieren */
+    align-items: center;          /* Vertikal zentrieren */
+    gap: 15px;                    /* Abstand zwischen den Buttons */
+    margin-top: 250px;            /* Abstand nach oben, falls gewünscht */
+    width: 100%;                  /* Sicherstellen, dass der Container die volle Breite einnimmt */
+    height: 100vh;                /* Sicherstellen, dass der Container die volle Höhe des Viewports einnimmt */
+    position: absolute;           /* Setzt den Container absolut innerhalb des Elternbereichs */
+    top: 0;                       /* Setzt den Container an den oberen Rand */
 }
 
 /* Styling für die einzelnen Buttons */
@@ -1276,9 +1294,8 @@ form button:hover {
 
 /* Beispiel für Hover-Effekt */
 .action-button:hover {
-    background-color: #555;
+    transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
 }
-
 
 /*SEARCH PAGE*/
 
