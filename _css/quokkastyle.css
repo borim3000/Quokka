@@ -1266,6 +1266,31 @@ form button:hover {
     background-color: #333;
 }
 
+/* Styling für die neuen Buttons (Anfragen, Chat) */
+.action-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #555; /* Hellerer Farbton für Hover-Effekt */
+}
+
+/* Styling für die Container der Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Abstand zwischen den Buttons */
+    margin-top: 20px;
+}
+
 /*SEARCH PAGE*/
 
 /*für desktop*/
