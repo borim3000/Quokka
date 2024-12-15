@@ -1267,15 +1267,13 @@ form button:hover {
 
 /* Container für die Buttons "Anfragen" & "Chat" */
 .action-button-container {
-    display: flex;                /* Setzt Flexbox für die Buttons */
-    justify-content: center;      /* Horizontal zentrieren */
-    align-items: center;          /* Vertikal zentrieren */
+    display: flex;                /* Flexbox für die Anordnung der Buttons */
+    justify-content: center;      /* Buttons horizontal zentrieren */
     gap: 15px;                    /* Abstand zwischen den Buttons */
-    margin-top: 250px;            /* Abstand nach oben, falls gewünscht */
-    width: 100%;                  /* Sicherstellen, dass der Container die volle Breite einnimmt */
-    height: 100vh;                /* Sicherstellen, dass der Container die volle Höhe des Viewports einnimmt */
-    position: absolute;           /* Setzt den Container absolut innerhalb des Elternbereichs */
-    top: 0;                       /* Setzt den Container an den oberen Rand */
+    position: relative;           /* Position relativ zum übergeordneten Element */
+    margin: 10px auto;            /* Abstand nach oben und zentriert durch auto */
+    width: fit-content;           /* Breite an den Inhalt (Buttons) anpassen */
+    z-index: 10;                  /* Buttons sicher über Kacheln anzeigen */
 }
 
 /* Styling für die einzelnen Buttons */
