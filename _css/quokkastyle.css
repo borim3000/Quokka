@@ -10,12 +10,18 @@
     --grey_low: rgb(240, 240, 240);
     --orange: rgb(246, 198, 96);
     --pink: rgb(244, 182, 168);
+    --darkred: #612c2c;
+
 }
 
 
 /*MAIN STUFF*/
 
 @import url(https://use.typekit.net/hdc5mif.css);
+
+img{
+    max-width: 100% !important;
+}
 
 body{
     font-family: "agenda-one-condensed";
@@ -70,11 +76,38 @@ header{
         margin-left: 20px; margin-right: 20px;
         border-radius: 25px;
     }
+
+    .menu_icons{     /* search & login icons*/
+        float: right;
+        padding: 20px;
+        display: flex;
+    }
+
+    .menu_icons img {
+        height: 50px;
+        margin: 10px;
+        transform: translate(170px, 15px);
+
+        transform-origin: top right;
+        transition: transform 0.3s ease;
+    }
+
+    .menu_icons img:hover{
+        transform: translate(173px, 10px) scale(1.15);
+    }
+
+    .top-bar-form{
+        opacity: 70%;
+        float: right;
+        transform: translate(-20px, 30px);
+        height: 80px;
+    }
 }
 
 .nav_links{ /*nav menu tabs*/
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
     margin: 0;
     padding: 0;
@@ -171,28 +204,25 @@ header, nav, main, footer {
         line-height: 0.9;
     }
 
-    .nav_links li a:hover::before, .aktiver_menulink::before {
-        height: 25px;
-    }
-
     .nav_toggle{
         display: none;
     }
 
     .nav_toggle_label{ /*burger menu icon*/
         position: fixed;
-        top: 40px;
-        right: 25px;
+        top: 35px;
+        right: 21px;
         cursor: pointer;
   
         display: flex;
         justify-content: center;
         align-items: center;
 
-        z-index: 1001;
+        z-index: 9999;
 
         background-color: var(--grey_low);
         border-radius: 25px;
+
     }
 
     .nav_toggle:checked ~ .nav_links{
@@ -201,18 +231,16 @@ header, nav, main, footer {
 
     .nav_links li a:hover::before, .aktiver_menulink::before {
 
-
+        height: 25px;
         background-color: var(--grey_mid);
         z-index: -1;
         border-radius: 8px;
         padding: 18px;
-        margin-left: 50px; margin-right: 50px
-
     }
 
     .dropdown_menu{
         position: fixed;
-        top: 100px;
+        top: 90px;
         left: 20px;
         width: calc(100% - 40px);
         padding-top: 40px;
@@ -220,6 +248,8 @@ header, nav, main, footer {
 
         background-color: var(--grey_low);
         border-radius: 15px;
+
+        transform: translate(0, -5px);
     }
 
     .smooth_line{
@@ -243,15 +273,27 @@ header, nav, main, footer {
 
     }
 
+    .nav_extras img {
+        transform: translate(-20px, 10px);
+    }
+
     .grey_bg{
         background-color: var(--grey_mid);
         border-radius: 15px;
         padding-top: 5px;
         padding-left: 40px; padding-right: 40px;
     }
+
+    .menu_icons{
+        display: none;
+    }
+
+    .top-bar-form{
+        display: none;
+    }
 }
 
-@media (min-width: 751px){ /*das macht, dass dropdownmenu bei breiteren bildschirmen nicht sichtbar ist*/
+@media (min-width: 750px){ /*das macht, dass dropdownmenu bei breiteren bildschirmen nicht sichtbar ist*/
     .nav_toggle_label{
         display:none;
     }
@@ -270,25 +312,147 @@ main {
 }
 
 
-/*footer*/
+/*footer für mobile*/
 
-footer{
-    width: 100%;
-    background-color: var(--grey_low);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 20px;
+@media(max-width: 750px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        background-color: var(--grey_low);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
 
 
-    font-size: 25px;
-    font-weight: 200;
+        font-size: 25px;
+        font-weight: 200;
+    }
+
+    .footer_links{
+        font-size: 28px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quokka_social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quokka_social img {
+        height: 5em;
+        padding: 15px;
+    }
+
+    .social_icons{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: -120px;
+        padding-bottom: 0.5em;
+    }
+
+    .social_icons img {
+        height: 1.6em;
+        width: auto;
+        transition: transform 0.3s ease;
+        padding: 15px;
+    }
+
+    .social_icons img:hover{
+        transform: scale(1.15);
+    }
+
+    .line_footer{
+        width: 90px;
+        height: 5px;
+        background-color: var(--grey_mid);
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 10px; margin-bottom: 10px;
+    }
 }
 
-.footer_links{
-    list-style: none;
+/*footer für desktop*/
 
+@media(min-width: 750px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        background-color: var(--grey_low);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding-top: 10px;
+
+
+        font-size: 25px;
+        font-weight: 200;
+    }
+
+    .footer_links{
+        font-size: 27px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .quokka_social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quokka_social img {
+        height: 5em;
+        padding: 20px;
+    }
+
+    .social_icons{
+        display: flex;
+        flex-direction: row;
+        margin-top: -110px;
+        margin-left: 5px;
+        padding-bottom: 2em;
+    }
+
+    .social_icons img {
+        height: 1.8em;
+        width: auto;
+        margin: 0 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .social_icons img:hover{
+        transform: scale(1.15);
+    }
+
+    .line_footer{
+        width: 90px;
+        height: 5px;
+        background-color: var(--grey_mid);
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 10px; 
+    }
+
+    .footer_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
 }
 
 /*stuff für angebote*/
@@ -358,32 +522,160 @@ footer{
 
 /*stuff für merch*/
 
-@media (min-width: 750px) {
+@media (min-width: 684px) {     /*merch desktop*/
+
+    .merch_title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        position: relative;
+        width: 100%;
+        min-height: 200px;
+        max-width: 1000px;
+        max-height: 1000px;
+
+        background-image: url(/img/formen/form-gelb-3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 200px;
+        overflow: hidden;
+
+        font-size: 50px;
+        font-weight: 600;
+    }
+
     .merch{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 20px;
-        height: 100vh;
-        margin-top: 10px;
         }
+
+        .merch_item{
+            box-sizing: border-box;
+            width: 49%;
+            height: 35vh;
+            width: 35vh;
+            margin-bottom: 10px;
+            position: relative;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: white;
+            border-radius: 10px;
+        
+        }
+
+        .merch_item img{
+            display: block;
+            margin: 0 auto;
+            width: 70%;
+        }
+
+    .merch_background{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(/img/formen/form-blau-5.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+    }
 }
 
-.merch_item{
-    box-sizing: border-box;
-    width: 49%;
-    height: 45vh;
-    width: 45vh;
-    margin-bottom: 10px;
-    position: relative;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: white;
-    border-radius: 10px;
+@media (max-width: 684px) {             /*merch mobile*/
 
+    .merch_title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        position: relative;
+        width: 100%;
+        min-height: 200px;
+        max-width: 1000px;
+        max-height: 1000px;
+
+        background-image: url(/img/formen/form-gelb-3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 200px;
+        overflow: hidden;
+
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .merch{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        }
+
+    .merch_item{
+        box-sizing: border-box;
+        width: 49%;
+        height: 35vh;
+        width: 35vh;
+        margin-bottom: 10px;
+        position: relative;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+
+    }
+
+    .merch_item img{
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    .merch_background{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(/img/formen/form-blau-6.png), url(/img/formen/form-pink-5.png), url(/img/formen/form-gelb-4.png);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 100% auto, 100% auto, 100% auto;
+        background-position: 10% 10%, 50% 50%, 60% 90%;
+
+        margin-top: 30px;
+
+    }
+}
+
+.merch_background{
+    margin-bottom: 50px;
+
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    pointer-events: none;
+}
+
+.merch {
+    position: relative;
+    z-index: 100;
+}
+
+.merch_item {
+    pointer-events: auto;
+    margin: 0;
 }
 
 .merch_text{
@@ -443,5 +735,1422 @@ footer{
         text-align: left;
         font-weight: 100;
     }
+}
+
+/*stuff für Login*/
+/* Hintergrund und Hauptcontainer */
+.login-container {
+    position: relative; /* Ermöglicht die Platzierung des Hintergrundbildes */
+    display: flex; /* Zentriert den Inhalt */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    min-height: 100%; /* Nimmt 100% von gesamte Bildschirmhöhe ein */
+    background-color: #fdfdfd; /* Neutraler Hintergrund */
+    overflow: hidden; /* Verhindert das Überlaufen von Inhalten */
+    margin: 50px 0px; /* Abstand von Rosa Fläche zu Header*/
+}
+
+/* Hintergrundbild (rosa Form) */
+.background-image {
+    position: absolute; /* Fixiert das Bild im Container */
+    top: 0;
+    left: 0;
+    width: 110%; /* Füllt den gesamten Container aus */
+    height: 100%;
+    z-index: 0; /* Liegt hinter dem Formular */
+    display: flex; /* Ermöglicht die Zentrierung des Inhalts */
+    justify-content: center; /* Zentriert das Bild horizontal */
+    align-items: center; /* Zentriert das Bild vertikal */
+}
+
+.background-image img {
+    width: 100%; /* Bild passt sich der Breite an */
+    height: 100%; /* Bild passt sich der Höhe an */
+    object-fit: cover; /* Schneidet das Bild korrekt zu */
+}
+
+/* Einstellungen für breitere Bildschirme (z. B. Laptops oder größere Displays) */
+@media screen and (min-width: 1024px) {
+    .background-image {
+        width: 100vw; /* Nimmt die gesamte Breite des Bildschirms */
+        height: 100vh; /* Nimmt die gesamte Höhe des Bildschirms */
+        display: flex; /* Ermöglicht das Zentrieren von Inhalten */
+        justify-content: center; /* Zentriert den Hintergrund horizontal */
+        align-items: center; /* Zentriert den Hintergrund vertikal */
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .background-image img {
+        width: auto; /* Bild behält seine Proportionen */
+        height: 100%; /* Passt die Höhe des Bildes an die Bildschirmhöhe an */
+        object-fit: contain; /* Bild bleibt vollständig sichtbar */
+    }
+}
+
+/* Login-Formular */
+.login-form {
+    position: relative; /* Formular liegt über dem Hintergrund */
+    padding: 30px; /* Innenabstand */
+    padding-bottom: 50px; /* Abstand von Passwort vergessen? zu rosa form*/
+    padding-top: 50px; /* Abstand von Login Titel auf Rosa Rand*/
+    width: 90%; /* Anpassbare Breite */
+    max-width: 400px; /* Maximale Breite */
+    z-index: 1; /* Vordergrund-Ebene */
+    text-align: center; /* Zentriert den Text */
+    margin-top: 150px;
+    margin-bottom: 250px;
+}
+
+/* Titelbild für Login */
+.login-title-image {
+    width: 60%; /* Passt sich der Breite des Formulars an */
+    max-width: 300px; /* Maximale Breite */
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+/* Beschreibungstext */
+.login-description {
+    font-size: 1.2rem; /* Standard-Schriftgröße */
+    color: #666; /* Graue Schrift */
+    margin-bottom: 20px; /* Abstand nach unten */
+    line-height: 1.5; /* Angenehmer Zeilenabstand */
+}
+
+/* Eingabefelder */
+form label {
+    display: block; /* Text oberhalb des Eingabefelds */
+    text-align: left; /* Links ausgerichtet */
+    margin: 10px 0 5px; /* Abstand zum Eingabefeld */
+    font-size: 0.9rem; /* Kleinere Schriftgröße */
+    color: #555; /* Dunkelgraue Farbe */
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 94%; /* Eingabefelder füllen die Breite */
+    padding: 10px; /* Innenabstand */
+    border: 1px solid #ccc; /* Grauer Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1rem; /* Standard-Schriftgröße */
+}
+
+/* Anmeldebutton */
+form button {
+    width: 100%; /* Button nimmt gesamte Breite */
+    padding: 10px; /* Innenabstand */
+    background-color: #612c2c; /* Dunkelrot */
+    color: #fff; /* Weiße Schriftfarbe */
+    border: none; /* Kein Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1rem; /* Schriftgröße */
+    font-weight: bold; /* Fettschrift */
+    cursor: pointer; /* Mauszeiger wird zur Hand */
+    margin: 20px 0; /* Abstand nach oben und unten */
+    transition: background-color 0.3s; /* Weicher Übergang bei Hover */
+}
+
+form button:hover {
+    background-color: #7d3c3c; /* Helleres Rot bei Hover */
+}
+
+/* Optionen: Checkbox und Link */
+.options {
+    display: flex; /* Elemente nebeneinander */
+    justify-content: space-between; /* Abstand dazwischen */
+    align-items: center; /* Vertikale Zentrierung */
+    font-size: 0.9rem; /* Kleinere Schriftgröße */
+}
+
+.options a {
+    color: #612c2c; /* Dunkelrote Links */
+    text-decoration: none; /* Keine Unterstreichung */
+}
+
+.options a:hover {
+    text-decoration: underline; /* Unterstreichung bei Hover */
+}
+
+
+/* Stuff für Über Quokka*/
+.ueberquokka-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.title-container {
+    padding: 30px; /* Innenabstand */
+    padding-bottom: 30px; /* Abstand von Passwort vergessen? zu rosa form*/
+    padding-top: 30px; /* Abstand von Login Titel auf Rosa Rand*/
+    width: 90%; /* Anpassbare Breite */
+    max-width: 600px; /* Maximale Breite */
+    text-align: center; /* Zentriert den Text */
+    margin: 20px auto;
+    position: relative;
+    justify-content: center;
+}
+
+.ueberquokka-title-image img {
+    width: 60%; /* Passt sich der Breite des Formulars an */
+    max-width: 500px; /* Maximale Breite */
+    margin-bottom: 20px; /* Abstand nach unten */
+    justify-content: center;
+}
+
+.ueberquokka-intro-text{
+    font-size: 1.8rem; /* Standard-Schriftgröße */
+    color: #666; /* Graue Schrift */
+    margin: 0 auto 40px; /* Abstand nach unten */
+    line-height: 1.5; /* Angenehmer Zeilenabstand */
+    text-align: center;
+}
+
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.team-member {
+    position: relative;
+    width: calc(50% - 10px);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 100%;
+    display: block; 
+    border-radius: 10px;
+    position: relative; /* Ermöglicht die Überlagerung durch die Icons */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+}
+
+.icons, .icons-left {
+    position: absolute;
+    bottom: 15%; /* Fixierte Position relativ zum unteren Rand des Bildes */
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18%;
+}
+
+.icons {
+    left: 60%;
+}
+
+.icons-left {
+    left: 45%;
+}
+
+.icons img, .icons-left img {
+    width: clamp(25px, 5vw, 50px); /* Dynamische Größenanpassung */
+    height: auto;
+    padding: 5px;
+    transition: transform 0.2s; /* Animation beim Hover */
+}
+
+
+.icons img:hover, .icons-left img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1700px) {
+    .team-section {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .icons, .icons-left {
+        bottom: 10%;
+        margin-bottom: 22%;
+    }
+}
+
+/* Zitat-Sektion Über Quokka*/
+.quote-section-ueberquokka {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+   margin-top: 40px;
+}
+
+.quote-ueberquokka {
+    position: relative;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.quote-background {
+    position: relative;
+}
+
+.quote-background img {
+    width: 100%;
+    display: block;
+}
+
+.quote-title {
+    font-size: clamp(3.5rem, 2vw, 4rem); /* Dynamische Schriftgröße */
+    font-weight: bolder;
+    font-style: normal;
+    color: #333;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -250%);
+    line-height: 1.4rem;
+    width: 80%;
+}
+
+.quote-text-ueberquokka {
+    font-size: clamp(2rem, 2.5vw, 5rem); /* Dynamische Schriftgröße */
+    font-weight: lighter;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    line-height: clamp(3rem, 2.5vw, 4rem); /* Dynamisches Zeilenverhältnis */
+    text-align: center;
+}
+
+
+/* Mobile Optimierungen */
+@media (max-width: 600px) {
+    .quote-title {
+        font-size: 2.5rem;
+        top: 80px;
+    }
+
+    .quote-text-ueberquokka {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+.quokka-title-image img {
+    width: 60%; /* Passt sich der Breite des Formulars an */
+    max-width: 500px; /* Maximale Breite */
+    margin-bottom: 20px; /* Abstand nach unten */
+    justify-content: center;
+}
+
+
+/*stuff für community*/
+
+.community-container{
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px;
+        display: flex; /* Flexbox aktivieren */
+        justify-content: center; /* Horizontale Zentrierung */
+        align-items: center; /* Vertikale Zentrierung */
+        text-align: center; /* Text zentrieren */
+    }
+
+    .Community_title img {
+        max-width: 100%; /* Bild passt sich der Breite des Containers an */
+        height: auto; /* Höhe wird proportional zur Breite angepasst */
+        margin-bottom: 100px; /* Abstand nach unten */
+    }   
+
+    .community-intro-text{
+        font-size: 2rem; /* Standard-Schriftgröße */
+        color: #666; /* Graue Schrift */
+        margin: 0 auto 40px; /* Abstand nach unten */
+        line-height: 1.8; /* Angenehmer Zeilenabstand */
+        text-align: center;
+    }
+
+      
+    .quotes-section {
+        padding: 50px 20px;
+      }
+
+
+      .quote-container {
+        text-align: center;
+        max-width: 600px;
+        line-height: 1.6;
+        color: #333;
+        margin: 40px auto;
+        padding: 100px;
+        background-size: 120%; /* Standardgröße */
+        background-position: center; /* Zentriert die Form */
+        background-repeat: no-repeat;
+        position: relative;
+        min-height: 250px;
+        }
+
+
+      .quote-container:first-child {
+        margin-top: 10px; /* Weniger Abstand zum vorherigen Inhalt */
+    }
+      
+      .quote {
+        font-size: 1.2rem; /* Standard-Schriftgröße */
+        color: #666; /* Graue Schrift */
+        font-size: 24px;
+        font-style: italic;
+        position: relative;
+        z-index: 2; /* Text liegt über dem Hintergrundbild */
+      }
+      
+      .author {
+        font-size: 1.2rem; /* Standard-Schriftgröße */
+        color: #666; /* Graue Schrift */
+        margin-top: 10px;
+        font-size: 18px;
+        position: relative;
+        z-index: 2; /* Text liegt über dem Hintergrundbild */
+      }
+
+      .quote-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1; /* Hintergrund bleibt hinter dem Text */
+    }
+
+    /* Für Bildschirme kleiner als 768px (Tablets) */
+    @media (max-width: 768px) {
+        .quote-container {
+            background-size: 200px; /* Mindestgröße für kleine Bildschirme */
+        }
+    }
+
+    /* Für sehr kleine Bildschirme (Smartphones) */
+    @media (max-width: 480px) {
+        .quote-container {
+            background-size: 150px; /* Noch kleinere Mindestgröße für sehr kleine Bildschirme */
+        }
+
+    }
+
+      .quote-container:nth-child(odd) {
+        background-image: url('../img/community/rot-form.png'); /* Roter Hintergrund */
+        background-size: 60%; /* Vergrößert die Form auf 60% ihrer Originalgröße */
+       
+    }
+    
+    .quote-container:nth-child(even) {
+        background-image: url('../img/community/blau-form.png'); /* Blauer Hintergrund */
+        background-size: 60%; /* Vergrößert die Form auf 60% ihrer Originalgröße */
+
+    }
+
+    .friendlist-btn-container {
+        text-align: center;
+        margin: 40px 0; /* Abstand zum oberen und unteren Inhalt */
+    }
+    
+    .friendlist-btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #333;
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+        border-radius: 5px; /* Abgerundete Ecken */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .friendlist-btn:hover {
+        background-color: #333; /* Etwas dunkler beim Hover */
+        transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+    }
+    
+    .friendlist-btn:active {
+        background-color: #333; /* Noch dunkler bei Klick */
+    }
+
+    /* Gesamtcontainer für die Kacheln */
+.friendlist-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Kacheln pro Reihe */
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Jede Freundes-Kachel */
+.friend-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Profilbild links oben */
+.friend-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Bereich für die Informationen des Freundes */
+.friend-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Name, Beruf und Kurse */
+.friend-details p {
+    margin: 5px 0;
+}
+
+.name {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.job {
+    font-size: 1rem;
+    color: #555;
+}
+
+.courses {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Responsives Layout für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .friendlist-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 Kacheln pro Reihe auf kleineren Bildschirmen */
+    }
+}
+
+@media (max-width: 480px) {
+    .friendlist-container {
+        grid-template-columns: 1fr; /* 1 Kachel pro Reihe auf sehr kleinen Bildschirmen */
+    }
+}
+  
+    
+ /* Container für den "Zurück"-Button */
+.zurück-button-container {
+    display: flex;                /* Flexbox für die Buttons */
+    justify-content: center;      /* Horizontal zentrieren */
+    align-items: center;          /* Vertikal zentrieren */
+    gap: 15px;                    /* Abstand zwischen den Buttons */
+    margin-top: 50px;             /* Abstand nach oben, anpassen, um ihn unter den Kacheln zu platzieren */
+    margin-bottom: 80px;          /* Mehr Abstand nach unten */
+    width: 100%;                  /* Container nimmt die volle Breite ein */
+    position: relative;           /* Relative Positionierung für bessere Platzierung */
+    top: 0;                       /* Kein Offset erforderlich */
+}
+
+/* Container für die Buttons "Anfragen" & "Chat" */
+.action-button-container {
+    display: flex;                /* Setzt Flexbox für die Buttons */
+    justify-content: center;      /* Horizontal zentrieren */
+    align-items: center;          /* Vertikal zentrieren */
+    gap: 15px;                    /* Abstand zwischen den Buttons */
+    margin-top: 250px;            /* Abstand nach oben, falls gewünscht */
+    width: 100%;                  /* Sicherstellen, dass der Container die volle Breite einnimmt */
+    height: 100vh;                /* Sicherstellen, dass der Container die volle Höhe des Viewports einnimmt */
+    position: absolute;           /* Setzt den Container absolut innerhalb des Elternbereichs */
+    top: 0;                       /* Setzt den Container an den oberen Rand */
+}
+
+/* Styling für die einzelnen Buttons */
+.action-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 150px;                /* Einheitliche Breite für alle Buttons */
+    border: none;                /* Keine Ränder um die Buttons */
+}
+
+/* Beispiel für Hover-Effekt */
+.action-button:hover {
+    transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+}
+
+/*SEARCH PAGE*/
+
+/*für desktop*/
+
+@media(min-width: 750px) {
+
+    .search_container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: auto;
+
+        position: relative;
+        height: 150px;
+        width: 300px;
+    }
+
+    .search_form{
+        position: absolute;
+        width: 40%;
+        object-fit: cover;
+        margin-top: 45px;
+    }
+
+    .search_title{
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .line_search{
+        position: absolute;
+        margin-top: 130px;
+
+        width: 90px;
+        height: 8px;
+        background-color: var(--grey_mid);
+        border-radius: 10px;
+    }
+
+    .search_text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        text-align: center;
+        width: 700px;
+        margin: 30px auto;
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    .search_bar_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        margin-top: -20px;
+        margin-bottom: 50px;
+        position: relative;
+        width: 100%;
+        min-height: 550px;
+        max-width: 1000px;
+        max-height: 1000px;
+
+        background-image: url(/img/formen/form-blau-4.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 800px;
+        overflow: hidden;
+
+    }
+
+    .search_bar_text{
+
+        font-size: 40px;
+        font-weight: 300;
+
+        margin-top: 30px;
+    }
+    .search_bar{
+        border: 2px solid var(--grey_mid);
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 300;
+        outline: none;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: var(--grey);
+
+        max-width: 400px;
+    }
+
+    .search_button{
+
+        max-width: 250px;
+        width: 60%;
+
+        font-size: 30px;
+        font-weight: 600;
+        background-color: var(--darkred);
+        color: white !important; 
+        border-radius: 10px;
+
+
+    }
+
+    .search_combine{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        width: 70%;
+        
+        margin-top: 30px;
+    }
+
+    
+}
+
+
+/*search page für mobile*/
+
+@media(max-width: 750px) {
+
+    .search_container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: auto;
+
+        position: relative;
+        height: 150px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search_form{
+        position: absolute;
+        width: 70%;
+        object-fit: cover;
+        margin-top: 65px;
+        opacity: 75%;
+    }
+
+    .search_title{
+        position: relative;
+        text-align: center;
+        font-size: 80px;
+        font-weight: 600;
+    }
+
+    .line_search{
+        position: absolute;
+        margin-top: 200px;
+
+        width: 90px;
+        height: 8px;
+        background-color: var(--grey_mid);
+        border-radius: 10px;
+    }
+
+    .search_text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        text-align: center;
+        min-width: 300px;
+        max-width: 500px;
+        margin: 80px auto;
+        padding: 20px;
+        font-size: 33px;
+        font-weight: 300;
+    }
+
+    .search_bar_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        margin-top: -100px;
+        position: relative;
+        width: 100%;
+        min-height: 500px;
+        max-width: 1000px;
+        max-height: 1000px;
+
+        background-image: url(/img/formen/form-blau-4.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 700px;
+        overflow: hidden;
+
+    }
+
+    .search_bar_text{
+
+        font-size: 40px;
+        font-weight: 300;
+
+    }
+
+    .search_bar{
+        border: 2px solid var(--grey_mid);
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 300;
+        outline: none;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: var(--grey);
+
+        width: 300px;
+    }
+
+    .search_button{
+        
+        width: 60%;
+
+        font-size: 30px;
+        font-weight: 600;
+        background-color: var(--darkred);
+        color: white !important; 
+        border-radius: 10px;
+
+
+    }
+
+    .search_combine{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        width: 70%;
+        
+        margin-top: 20px;
+    }
+
+}
+
+/*STUFF FÜR HOME*/
+
+/*für desktop*/
+
+@media (min-width: 750px){
+
+    .welcome_container{             /*willkommen bei quokka - DESKTOP*/
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 170px auto;
+
+        position: relative;
+        height: 150px;
+        width: 300px;
+    }
+
+    .home_form{
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        margin-top: -140px;
+    }
+
+    .home_welcome{
+        position: relative;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 800;
+        margin-top: -80px;
+
+    }
+
+    .home_container_0{              /*work-life-balance - DESKTOP*/
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        position: relative;
+        max-width: 1500px;
+        height: 250px;
+
+        margin-top: -120px;
+        margin-bottom: 50px;
+    }
+
+    .home_form_0{
+        position: relative;
+        width: 350px;
+        height: 50%;
+        opacity: 80%;
+
+    }
+
+    .home_title_0{
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        margin-top: 35px;
+    }
+
+    .home_text_0{
+        position: absolute;
+        text-align: center;
+        margin-top: 150px;
+        width: 730px;
+
+        font-size: 30px;
+    }
+
+    .home_container_1{              /*angebote - DESKTOP*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -80px;
+
+        background-image: url(/img/formen/form-pink-3.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 500px;
+        min-width: 500px;
+        max-height: 500px;
+
+        transform: translate(150px);
+    }
+
+    .home_title_1{
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        transform: translate(-70px, -40px);
+    }
+
+    .home_subtitle_1{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+        transform: translate(0px, -150px);
+    }
+
+    .home_text_1{
+        text-align: center;
+        transform: translate(0px, -200px);
+        width: 400px;
+        font-size: 35px;
+    }
+
+    .home_icon_1{
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+        transform: translate(300px, 50px);
+    }
+
+    .home_container_2{              /*community - DESKTOP*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -80px;
+
+        background-image: url(/img/formen/form-blau-4.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 600px;
+        min-width: 500px;
+        max-height: 500px;
+
+        transform: translate(-150px);
+    }
+
+    .home_title_2{
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        transform: translate(100px, 0px);
+    }
+
+    .home_subtitle_2{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+        transform: translate(50px, -110px);
+    }
+
+    .home_text_2{
+        text-align: center;
+        font-size: 35px;
+        max-width: 400px;
+        transform: translate(200px, -180px);
+    }
+
+    .home_icon_2{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        transform: translate(200px, 70px);
+    }
+
+    .home_container_3{              /*news - DESKTOP*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -80px;
+
+        background-image: url(/img/formen/form-gelb-2.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 500px;
+        min-width: 500px;
+        max-height: 500px;
+
+        transform: translate(150px);
+    }
+
+    .home_title_3{
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        transform: translate(-40px, -40px);
+    }
+
+    .home_subtitle_3{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+        transform: translate(-20px, -150px);
+    }
+
+    .home_text_3{
+        text-align: center;
+        width: 480px;
+        font-size: 35px;
+        transform: translate(-30px, -200px);
+    }
+
+    .home_icon_3{
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+        transform: translate(300px, 50px);
+    }
+
+    .home_container_4{              /*login - DESKTOP*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -110px;
+
+        background-image: url(/img/formen/form-pink-4.png);
+        background-size: 90%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 600px;
+        min-width: 500px;
+        max-height: 500px;
+
+        transform: translate(-150px);
+    }
+
+    .home_title_4{
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        transform: translate(100px, -100px);
+    }
+
+    .home_subtitle_4{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+        transform: translate(50px, -110px);
+    }
+
+    .home_text_4{
+        text-align: center;
+        font-size: 35px;
+        max-width: 400px;
+        transform: translate(200px, -180px);
+    }
+
+    .home_icon_4{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        transform: translate(200px, 0px);
+    }
+
+    .home_container_5{              /*über quokka - DESKTOP*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 0px;
+
+        background-image: url(/img/formen/form-blau-5.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 500px;
+        min-width: 500px;
+        max-height: 500px;
+
+        transform: translate(150px);
+    }
+
+    .home_title_5{
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        transform: translate(-80px, -40px);
+    }
+
+    .home_subtitle_5{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+        transform: translate(-20px, -150px);
+    }
+
+    .home_text_5{
+        text-align: center;
+        width: 400px;
+        font-size: 35px;
+        transform: translate(20px, -200px);
+    }
+
+    .home_icon_5{
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+        transform: translate(300px, 50px);
+    }
+
+}
+
+/*für mobile*/
+
+@media (max-width: 750px){
+
+    .welcome_container{             /*willkommen bei quokka - MOBILE*/
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 100px auto;
+
+        position: relative;
+        height: 150px;
+        width: 200px;
+    }
+
+    .home_form{
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .home_welcome{
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 800;
+
+    }
+
+    .home_container_0{              /*work-life-balance - MOBILE*/
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 50px;
+
+        position: relative;
+        max-width: 1500px;
+        height: 250px;
+    }
+
+    .home_form_0{
+        position: relative;
+        width: 250px;
+        height: 30%;
+        opacity: 80%;
+
+    }
+
+    .home_title_0{
+        position: absolute;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+
+    .home_text_0{
+        position: absolute;
+        text-align: center;
+        margin-top: 100px;
+        width: 330px;
+
+        font-size: 24px;
+    }
+
+    .home_container_1{              /*angebote - MOBILE*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -150px;
+
+        background-image: url(/img/formen/form-pink-3.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 330px;
+        min-width: 330px;
+        max-height: 500px;
+
+    }
+
+    .home_title_1{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        transform: translate(-40px, -80px);
+    }
+
+    .home_subtitle_1{
+        text-align: center;
+        font-size: 35px;
+        font-weight: 500;
+        transform: translate(30px, -160px);
+    }
+
+    .home_text_1{
+        text-align: center;
+        width: 300px;
+        font-size: 24px;
+        transform: translate(0px, -220px);
+    }
+
+    .home_icon_1{
+        position: relative;
+        width: 75px;
+        height: 75px;
+
+        transform: translate(220px, -5px);
+    }
+
+    .home_container_2{              /*community - MOBILE*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -200px;
+
+        background-image: url(/img/formen/form-blau-4.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 330px;
+        min-width: 330px;
+        max-height: 500px;
+    }
+
+    .home_title_2{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        transform: translate(30px, -110px);
+    }
+
+    .home_subtitle_2{
+        text-align: center;
+        font-size: 35px;
+        font-weight: 500;
+        transform: translate(-30px, -190px);
+    }
+
+    .home_text_2{
+        text-align: center;
+        width: 300px;
+        font-size: 24px;
+        transform: translate(30px, -250px);
+    }
+
+    .home_icon_2{
+        position: relative;
+        width: 75px;
+        height: 75px;
+
+        transform: translate(0px, 0px);
+    }
+
+    .home_container_3{              /*news - MOBILE*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -170px;
+
+        background-image: url(/img/formen/form-gelb-2.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 330px;
+        min-width: 330px;
+        max-height: 500px;
+    }
+
+    .home_title_3{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        transform: translate(-60px, -100px);
+    }
+
+    .home_subtitle_3{
+        text-align: center;
+        font-size: 35px;
+        font-weight: 500;
+        transform: translate(0px, -190px);
+    }
+
+    .home_text_3{
+        text-align: center;
+        width: 300px;
+        font-size: 24px;
+        transform: translate(30px, -240px);
+    }
+
+    .home_icon_3{
+        position: relative;
+        width: 75px;
+        height: 75px;
+
+        transform: translate(190px, -20px);
+    }
+
+    .home_container_4{              /*login - MOBILE*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -130px;
+
+        background-image: url(/img/formen/form-pink-4.png);
+        background-size: 90%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 330px;
+        min-width: 330px;
+        max-height: 500px;
+    }
+
+    .home_title_4{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        transform: translate(0px, -120px);
+    }
+
+    .home_text_4{
+        text-align: center;
+        width: 300px;
+        font-size: 24px;
+        transform: translate(0px, -180px);
+    }
+
+    .home_icon_4{
+        position: relative;
+        width: 75px;
+        height: 75px;
+
+        transform: translate(0px, -30px);
+    }
+
+    .home_container_5{              /*über quokka - MOBILE*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -230px;
+
+        background-image: url(/img/formen/form-blau-5.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 330px;
+        min-width: 330px;
+        max-height: 500px;
+    }
+
+    .home_title_5{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        transform: translate(-30px, -85px);
+    }
+
+    .home_subtitle_5{
+        text-align: center;
+        font-size: 35px;
+        font-weight: 500;
+        transform: translate(0px, -170px);
+    }
+
+    .home_text_5{
+        text-align: center;
+        width: 300px;
+        font-size: 24px;
+        transform: translate(0px, -220px);
+    }
+
+    .home_icon_5{
+        position: relative;
+        width: 75px;
+        height: 75px;
+
+        transform: translate(200px, -40px);
+    }
+
+    .home_resize{           /*ganzes home für mobile bisschen kleiner*/
+        transform: scale(0.8); 
+        transform: translate(0px, -50px);
+    }
+
 }
 
