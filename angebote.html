@@ -6,10 +6,9 @@
     <title>Quokka</title>
 
     <link rel="stylesheet" href="/_css/quokkastyle.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://use.typekit.net/hdc5mif.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/hdc5mif.css">
 </head>
 
 <body>
@@ -19,7 +18,6 @@
                 <img src="/img/logos/Quokka_Logo_b-r_2.png" class="font-logo">
             </a>
         </div>
-    
     </header>
 
     <div class="top-bar">
@@ -29,26 +27,33 @@
             <a href="/login.html"><img src="/img/icons8-user-96.png" alt="user-icon"></a>
         </div>
     </div>
-    
+
     <nav>
         <input type="checkbox" id="nav_toggle" class="nav_toggle">
         <label for="nav_toggle" class="nav_toggle_label"><img src="/img/Quokka_menu_icon.png" alt="icon" style="width: 100px;"></label>
-
         <ul class="nav_links dropdown_menu">
-                <div class="smooth_line"></div>
+            <div class="smooth_line"></div>
             <li><a href="/index.html">Quokka Home</a></li>
             <li><a class="aktiver_menulink" href="/angebote.html">Angebote</a></li>
             <li><a href="/community.html">Community</a></li>
             <li><a href="/merch.html">Merchandise</a></li>
             <li><a href="/ueber-quokka.html">Über Quokka</a></li>
-                <div class="nav_extras">
-                    <a href="search.html" class="grey_bg"><img src="img/icons8-search-90.png" width="45px" height="45px"> Suche</a><br>
-                    <a href="login.html"><img src="img/icons8-user-96.png" width="45px" height="45px"> Login</a>
-                </div>
+            <div class="nav_extras">
+                <a href="search.html" class="grey_bg"><img src="img/icons8-search-90.png" width="45px" height="45px"> Suche</a><br>
+                <a href="login.html"><img src="img/icons8-user-96.png" width="45px" height="45px"> Login</a>
+            </div>
         </ul>
     </nav>
 
-    <main>
+    <main class="angebot_container" style="background-color: white;">
+        <!-- Angebote Title Bild oben in der Mitte -->
+        <div class="angebote_title">
+            <img src="img/angebot/Angeobte_title.png" alt="Angebote Title" width="650" height="300">
+        </div>
+        
+        <p class="angebote-intro-text">
+            Finde hier deinen Ausgleich zum Arbeitsleben oder Studium! Nutze unsere Filteroptionen für deinen perfekten Match.
+        </p> 
         <div class="angebot_container">
             <a href="/angebote/kurs1.html">
                 <div class="angebot" style="background-image: url(/img/angebot/high-angle-artisan-doing-pottery-studio.jpg);">
@@ -65,18 +70,22 @@
                     <div class="mini_marker">In diesem Kurs wanderst du mit Alpacas, um dem Alltag zu entfliehen.</div>
                 </div>
             </a>
+            
             <a href="/angebote/kurs1.html">
                 <div class="angebot" style="background-image: url(/img/angebot/front-view-hand-painting-sun.jpg);">
                     <div class="marker">Kreatives Malen für die Seele!</div>
                     <br>
                     <div class="mini_marker">Ein entspannender Malkurs, in dem du deine Emotionen in Farben ausdrücken und dabei den Alltagsstress hinter dir lassen kannst.</div>
                 </div>
-                <a href="/angebote/kurs1.html">
-                    <div class="angebot" style="background-image: url(/img/angebot/someone-trimming-bushes-with-garden-scissors.jpg);">
-                        <div class="marker">Gartenarbeit als Auszeit</div>
-                        <br>
-                        <div class="mini_marker">Entfliehe dem hektischen Alltag, indem du im Grünen arbeitest und eine tiefere Verbindung zur Natur aufbaust.
-            </div></a>
+            </a>
+            
+            <a href="/angebote/kurs1.html">
+                <div class="angebot" style="background-image: url(/img/angebot/someone-trimming-bushes-with-garden-scissors.jpg);">
+                    <div class="marker">Gartenarbeit als Auszeit</div>
+                    <br>
+                    <div class="mini_marker">Entfliehe dem hektischen Alltag, indem du im Grünen arbeitest und eine tiefere Verbindung zur Natur aufbaust.</div>
+                </div>
+            </a>
         </div>
     </main>
 
@@ -87,7 +96,6 @@
             <div>
                 <div class="quokka_social">
                     <img src="/img/formen/form_blau_2.png" alt="quokkaform">
-                        
                 </div>
 
                 <div class="social_icons">
