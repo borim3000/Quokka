@@ -856,8 +856,7 @@ button {
 
 /* Beschreibungstext */
 .login-description {
-    font-size: 35px; /* Standard-Schriftgröße */
-    color: #666; /* Graue Schrift */
+    font-size: 20px; /* Standard-Schriftgröße */
     margin-bottom: 20px; /* Abstand nach unten */
     line-height: 1.5; /* Angenehmer Zeilenabstand */
 }
@@ -868,7 +867,7 @@ form label {
     text-align: left; /* Links ausgerichtet */
     margin: 10px 0 5px; /* Abstand zum Eingabefeld */
     font-size: 0.9rem; /* Kleinere Schriftgröße */
-    color: #555; /* Dunkelgraue Farbe */
+    color: gray; /* Dunkelgraue Farbe */
 }
 
 form input[type="text"],
@@ -885,7 +884,7 @@ form button {
     width: 100%; /* Button nimmt gesamte Breite */
     padding: 10px; /* Innenabstand */
     background-color: #612c2c; /* Dunkelrot */
-    color: #fff; /* Weiße Schriftfarbe */
+    color: white; /* Weiße Schriftfarbe */
     border: none; /* Kein Rahmen */
     border-radius: 5px; /* Abgerundete Ecken */
     font-size: 1rem; /* Schriftgröße */
