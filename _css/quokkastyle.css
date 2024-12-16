@@ -36,11 +36,6 @@ a {
     color: var(--grey)
 }
 
-header{
-    display: flex;
-    align-items: center;
-}
-
 .logo{
     flex:1;
     z-index: 10000;
