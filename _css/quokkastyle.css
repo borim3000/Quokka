@@ -519,6 +519,51 @@ main {
     line-height: 0.9;
 }
 
+/* Bild zentrieren */
+.angebote_title {
+    display: flex;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren (falls nötig) */
+    margin-bottom: 1em; /* Abstand nach unten */
+    width: 300px;
+}
+
+/* Intro-Text zentrieren und vergrößern */
+.angebote-intro-text {
+    text-align: center; /* Zentriert den Text */
+    font-size: 1.8rem; /* Schriftgröße anpassen */
+    font-weight: 600; /* Dickere Schrift */
+    margin-bottom: 2em; /* Abstand nach unten */
+    line-height: 1.5; /* Lesbarkeit verbessern */
+}
+/* Buttons */
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn {
+    background-color: #7d7d7d;
+    color: #fff;
+}
+
+.action-btn {
+    background-color: #6d1f1f;
+    color: #fff;
+}
+
+.action-btn:hover {
+    background-color: #8b2727;
+}
 
 /*stuff für merch*/
 
@@ -811,7 +856,7 @@ main {
 
 /* Beschreibungstext */
 .login-description {
-    font-size: 1.2rem; /* Standard-Schriftgröße */
+    font-size: 35px; /* Standard-Schriftgröße */
     color: #666; /* Graue Schrift */
     margin-bottom: 20px; /* Abstand nach unten */
     line-height: 1.5; /* Angenehmer Zeilenabstand */
