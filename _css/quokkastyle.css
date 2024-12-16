@@ -36,10 +36,7 @@ a {
     color: var(--grey)
 }
 
-header{
-    display: flex;
-    align-items: center;
-}
+
 
 .logo{
     flex:1;
@@ -520,6 +517,52 @@ main {
 }
 
 
+
+/* Bild zentrieren */
+.angebote_title {
+    display: flex;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren (falls nötig) */
+    margin-bottom: 1em; /* Abstand nach unten */
+    width: 300px;
+}
+
+/* Intro-Text zentrieren und vergrößern */
+.angebote-intro-text {
+    text-align: center; /* Zentriert den Text */
+    font-size: 1.8rem; /* Schriftgröße anpassen */
+    font-weight: 600; /* Dickere Schrift */
+    margin-bottom: 2em; /* Abstand nach unten */
+    line-height: 1.5; /* Lesbarkeit verbessern */
+}
+/* Buttons */
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn {
+    background-color: #7d7d7d;
+    color: #fff;
+}
+
+.action-btn {
+    background-color: #6d1f1f;
+    color: #fff;
+}
+
+.action-btn:hover {
+    background-color: #8b2727;
+}
 /*stuff für merch*/
 
 @media (min-width: 684px) {     /*merch desktop*/
@@ -811,8 +854,7 @@ main {
 
 /* Beschreibungstext */
 .login-description {
-    font-size: 35px; /* Standard-Schriftgröße */
-    color: #666; /* Graue Schrift */
+    font-size: 20px; /* Standard-Schriftgröße */
     margin-bottom: 20px; /* Abstand nach unten */
     line-height: 1.5; /* Angenehmer Zeilenabstand */
 }
@@ -823,7 +865,7 @@ form label {
     text-align: left; /* Links ausgerichtet */
     margin: 10px 0 5px; /* Abstand zum Eingabefeld */
     font-size: 0.9rem; /* Kleinere Schriftgröße */
-    color: #555; /* Dunkelgraue Farbe */
+    color: var(--grey); /* Dunkelgraue Farbe */
 }
 
 form input[type="text"],
@@ -839,8 +881,8 @@ form input[type="password"] {
 form button {
     width: 100%; /* Button nimmt gesamte Breite */
     padding: 10px; /* Innenabstand */
-    background-color: #612c2c; /* Dunkelrot */
-    color: #fff; /* Weiße Schriftfarbe */
+    background-color: var(--darkred); /* Dunkelrot */
+    color: white; /* Weiße Schriftfarbe */
     border: none; /* Kein Rahmen */
     border-radius: 5px; /* Abgerundete Ecken */
     font-size: 1rem; /* Schriftgröße */
@@ -1052,7 +1094,6 @@ form button:hover {
 
     .community-intro-text{
         font-size: 30px; 
-        color: #666; 
         margin: 0 auto 40px; /* Abstand nach unten */
         line-height: 1.8; /* Angenehmer Zeilenabstand */
         text-align: center;
@@ -1066,7 +1107,6 @@ form button:hover {
         text-align: center;
         max-width: 600px;
         line-height: 1.6;
-        color: #333;
         margin: 40px auto;
         padding: 100px;
         background-size: 120%; 
@@ -1083,7 +1123,6 @@ form button:hover {
       
       .quote {
         font-size: 70px;
-        color: #666; 
         font-size: 24px;
         font-style: italic;
         position: relative;
@@ -1092,7 +1131,6 @@ form button:hover {
       
       .author {
         font-size: 50px; 
-        color: #666; 
         margin-top: 10px;
         font-size: 18px;
         position: relative;
@@ -1144,7 +1182,7 @@ form button:hover {
     .friendlist-btn {
         display: inline-block;
         padding: 15px 30px;
-        background-color: #333;
+        background-color: var(--grey);
         color: white;
         font-size: 1.2rem;
         text-decoration: none;
@@ -1260,7 +1298,7 @@ form button:hover {
 /* Styling für die einzelnen Buttons */
 .action-button {
     padding: 10px 20px;
-    background-color: #333;
+    background-color: var(--grey);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
