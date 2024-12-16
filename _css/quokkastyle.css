@@ -811,7 +811,7 @@ main {
 
 /* Beschreibungstext */
 .login-description {
-    font-size: 1.2rem; /* Standard-Schriftgröße */
+    font-size: 35px; /* Standard-Schriftgröße */
     color: #666; /* Graue Schrift */
     margin-bottom: 20px; /* Abstand nach unten */
     line-height: 1.5; /* Angenehmer Zeilenabstand */
