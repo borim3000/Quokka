@@ -1692,7 +1692,7 @@ form button:hover {
         transform: translate(200px, 70px);
     }
 
-    .home_container_3{              /*news - DESKTOP*/
+    .home_container_3{              /*anbieter - DESKTOP*/
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1715,7 +1715,7 @@ form button:hover {
         text-align: center;
         font-size: 70px;
         font-weight: 600;
-        transform: translate(-40px, -40px);
+        transform: translate(-40px, -30px);
     }
 
     .home_subtitle_3{
@@ -1729,7 +1729,7 @@ form button:hover {
         text-align: center;
         width: 480px;
         font-size: 35px;
-        transform: translate(-30px, -200px);
+        transform: translate(-30px, -210px);
     }
 
     .home_icon_3{
@@ -1737,7 +1737,7 @@ form button:hover {
         width: 100px;
         height: 100px;
 
-        transform: translate(300px, 50px);
+        transform: translate(270px, 50px);
     }
 
     .home_container_4{              /*login - DESKTOP*/
@@ -1756,35 +1756,28 @@ form button:hover {
         min-width: 500px;
         max-height: 500px;
 
-        transform: translate(-150px);
+        transform: translate(-80px);
     }
 
     .home_title_4{
         text-align: center;
         font-size: 70px;
         font-weight: 600;
-        transform: translate(100px, -100px);
-    }
-
-    .home_subtitle_4{
-        text-align: center;
-        font-size: 50px;
-        font-weight: 500;
-        transform: translate(50px, -110px);
+        transform: translate(50px, -100px);
     }
 
     .home_text_4{
         text-align: center;
         font-size: 35px;
         max-width: 400px;
-        transform: translate(200px, -180px);
+        transform: translate(150px, -180px);
     }
 
     .home_icon_4{
         position: relative;
         width: 100px;
         height: 100px;
-        transform: translate(200px, 0px);
+        transform: translate(150px, 0px);
     }
 
     .home_container_5{              /*über quokka - DESKTOP*/
@@ -1995,7 +1988,7 @@ form button:hover {
         transform: translate(0px, 0px);
     }
 
-    .home_container_3{              /*news - MOBILE*/
+    .home_container_3{              /*anbieter - MOBILE*/
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2016,21 +2009,21 @@ form button:hover {
         text-align: center;
         font-size: 50px;
         font-weight: 600;
-        transform: translate(-60px, -100px);
+        transform: translate(-10px, -80px);
     }
 
     .home_subtitle_3{
         text-align: center;
         font-size: 35px;
         font-weight: 500;
-        transform: translate(0px, -190px);
+        transform: translate(0px, -170px);
     }
 
     .home_text_3{
         text-align: center;
         width: 300px;
         font-size: 24px;
-        transform: translate(30px, -240px);
+        transform: translate(30px, -220px);
     }
 
     .home_icon_3{
@@ -2038,7 +2031,7 @@ form button:hover {
         width: 75px;
         height: 75px;
 
-        transform: translate(190px, -20px);
+        transform: translate(190px, -25px);
     }
 
     .home_container_4{              /*login - MOBILE*/
@@ -2133,3 +2126,281 @@ form button:hover {
 
 }
 
+/*anbieter werden page*/
+
+@media(min-width: 750px) {          /*anbieter DESKTOP*/
+
+    .anbieter_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        position: relative;
+        width: 100%;
+        min-height: 650px;
+        max-width: 1000px;
+        max-height: 1000px;
+
+        background-image: url(/img/formen/form-gelb-5.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 800px;
+        overflow: hidden;
+
+    }
+
+    .anbieter_title{
+
+        font-size: 60px;
+        font-weight: 600;
+
+        margin-top: 30px;
+    }
+
+    .anbieter_text{
+
+        font-size: 25px;
+        text-align: center;
+
+        max-width: 600px;
+        min-width: 300px;
+
+        margin-top: 30px;
+    }
+
+    .anbieter_button{
+
+        max-width: 300px;
+        width: 60%;
+
+        font-size: 30px;
+        font-weight: 600;
+        background-color: var(--darkred);
+        color: white !important; 
+        border-radius: 10px;
+
+        margin-top: -5px;
+    }
+
+    .anb_reason_container_1{              
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+
+        background-image: url(/img/formen/form-blau-3.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        position: relative;
+        max-width: 700px;
+        min-width: 500px;
+        max-height: 500px;
+    }
+
+    .anb_reason_container_2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+
+        background-image: url(/img/formen/form-pink-4.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: relative;
+        max-width: 700px;
+        min-width: 500px;
+        max-height: 500px;
+    }
+
+    .anb_reason_container_3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 30px;
+
+        background-image: url(/img/formen/form-gelb-3.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: relative;
+        max-width: 700px;
+        min-width: 500px;
+        max-height: 500px;
+    }
+
+    .anb_reason_title{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .anb_reason_text{
+        text-align: center;
+        font-size: 25px;
+        font-weight: 300;
+        max-width: 500px;
+
+        margin: auto;
+        margin-bottom: 30px;
+
+        transform: translate(0px, -30px);
+    }
+}
+
+@media(max-width: 750px) {          /*anbieter MOBILE*/
+
+    .anbieter_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        position: relative;
+        width: 100%;
+        min-height: 900px;
+        max-width: 1500px;
+        max-height: 1500px;
+
+        background-image: url(/img/formen/form-gelb-5.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1100px;
+        overflow: hidden;
+
+    }
+
+    .anbieter_title{
+
+        font-size: 45px;
+        font-weight: 600;
+
+        max-width: 370px;
+
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .anbieter_text{
+
+        font-size: 25px;
+        text-align: center;
+
+        max-width: 450px;
+        min-width: 300px;
+
+        margin: 30px 20px 0px 20px;
+    }
+
+    .anbieter_button{
+
+        width: 300px;
+
+        font-size: 30px;
+        font-weight: 600;
+        background-color: var(--darkred);
+        color: white !important; 
+        border-radius: 10px;
+
+        margin-top: -5px;
+    }
+
+    .anb_reason_container_1{              
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        position: relative;
+        width: 100%;
+        min-height: 610px;
+
+        background-image: url(/img/formen/form-blau-3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1100px;
+        overflow: hidden;
+    }
+
+    .anb_reason_container_2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        position: relative;
+        width: 100%;
+        min-height: 410px;
+
+        background-image: url(/img/formen/form-pink-4.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 800px;
+        overflow: hidden;
+    }
+
+    .anb_reason_container_3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: auto;
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+
+        background-image: url(/img/formen/form-gelb-3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 800px;
+        overflow: hidden;
+    }
+
+    .anb_reason_title{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+
+        max-width: 300px;
+    }
+
+    .anb_reason_text{
+        text-align: center;
+        font-size: 25px;
+        font-weight: 300;
+        max-width: 300px;
+
+        margin: auto;
+        margin-bottom: 30px;
+
+        transform: translate(0px, -30px);
+    }
+}
+
+.line_grey{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;     margin-bottom: 20px;
+
+    width: 90px;
+    height: 8px;
+    background-color: var(--grey_mid);
+    border-radius: 10px;
+}
