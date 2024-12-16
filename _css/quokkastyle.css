@@ -899,8 +899,7 @@ form button:hover {
 }
 
 .ueberquokka-intro-text{
-    font-size: 1.8rem; /* Standard-Schriftgröße */
-    color: #666; /* Graue Schrift */
+    font-size: 50px; /* Standard-Schriftgröße */
     margin: 0 auto 40px; /* Abstand nach unten */
     line-height: 1.5; /* Angenehmer Zeilenabstand */
     text-align: center;
