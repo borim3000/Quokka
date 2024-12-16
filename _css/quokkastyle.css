@@ -856,7 +856,7 @@ button {
 
 /* Beschreibungstext */
 .login-description {
-    font-size: 1.2rem; /* Standard-Schriftgröße */
+    font-size: 35px; /* Standard-Schriftgröße */
     color: #666; /* Graue Schrift */
     margin-bottom: 20px; /* Abstand nach unten */
     line-height: 1.5; /* Angenehmer Zeilenabstand */
@@ -1096,35 +1096,17 @@ form button:hover {
 
 /*stuff für community*/
 
-.community-container{
-        width: 90%;
-        margin: 0 auto;
-        padding: 50px;
-        display: flex; /* Flexbox aktivieren */
-        justify-content: center; /* Horizontale Zentrierung */
-        align-items: center; /* Vertikale Zentrierung */
-        text-align: center; /* Text zentrieren */
-    }
-
-    .Community_title img {
-        max-width: 100%; /* Bild passt sich der Breite des Containers an */
-        height: auto; /* Höhe wird proportional zur Breite angepasst */
-        margin-bottom: 100px; /* Abstand nach unten */
-    }   
-
     .community-intro-text{
-        font-size: 2rem; /* Standard-Schriftgröße */
-        color: #666; /* Graue Schrift */
+        font-size: 30px; 
+        color: #666; 
         margin: 0 auto 40px; /* Abstand nach unten */
         line-height: 1.8; /* Angenehmer Zeilenabstand */
         text-align: center;
     }
 
-      
     .quotes-section {
         padding: 50px 20px;
       }
-
 
       .quote-container {
         text-align: center;
@@ -1133,7 +1115,7 @@ form button:hover {
         color: #333;
         margin: 40px auto;
         padding: 100px;
-        background-size: 120%; /* Standardgröße */
+        background-size: 120%; 
         background-position: center; /* Zentriert die Form */
         background-repeat: no-repeat;
         position: relative;
@@ -1146,8 +1128,8 @@ form button:hover {
     }
       
       .quote {
-        font-size: 1.2rem; /* Standard-Schriftgröße */
-        color: #666; /* Graue Schrift */
+        font-size: 70px;
+        color: #666; 
         font-size: 24px;
         font-style: italic;
         position: relative;
@@ -1155,8 +1137,8 @@ form button:hover {
       }
       
       .author {
-        font-size: 1.2rem; /* Standard-Schriftgröße */
-        color: #666; /* Graue Schrift */
+        font-size: 50px; 
+        color: #666; 
         margin-top: 10px;
         font-size: 18px;
         position: relative;
@@ -1312,15 +1294,13 @@ form button:hover {
 
 /* Container für die Buttons "Anfragen" & "Chat" */
 .action-button-container {
-    display: flex;                /* Setzt Flexbox für die Buttons */
-    justify-content: center;      /* Horizontal zentrieren */
-    align-items: center;          /* Vertikal zentrieren */
+    display: flex;                /* Flexbox für die Anordnung der Buttons */
+    justify-content: center;      /* Buttons horizontal zentrieren */
     gap: 15px;                    /* Abstand zwischen den Buttons */
-    margin-top: 250px;            /* Abstand nach oben, falls gewünscht */
-    width: 100%;                  /* Sicherstellen, dass der Container die volle Breite einnimmt */
-    height: 100vh;                /* Sicherstellen, dass der Container die volle Höhe des Viewports einnimmt */
-    position: absolute;           /* Setzt den Container absolut innerhalb des Elternbereichs */
-    top: 0;                       /* Setzt den Container an den oberen Rand */
+    position: relative;           /* Position relativ zum übergeordneten Element */
+    margin: 10px auto;            /* Abstand nach oben und zentriert durch auto */
+    width: fit-content;           /* Breite an den Inhalt (Buttons) anpassen */
+    z-index: 10;                  /* Buttons sicher über Kacheln anzeigen */
 }
 
 /* Styling für die einzelnen Buttons */
