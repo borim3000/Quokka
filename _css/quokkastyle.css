@@ -36,11 +36,14 @@ a {
     color: var(--grey)
 }
 
-
+.font_logo{
+    z-index: 9999;
+}
 
 .logo{
-    flex:1;
-    z-index: 10000;
+    position: relative;
+    flex: 1;
+    z-index: 9999;
 }
 
 .logo-img{
@@ -157,9 +160,8 @@ header, nav, main, footer {
 }
 
 
-/*NAV MENU for mobile*/
 
-@media(max-width: 750px){
+@media(max-width: 750px){       /*NAV MENU for mobile*/
 
     .font-logo{
         max-width: 250px;
@@ -186,8 +188,9 @@ header, nav, main, footer {
         width: 100%;
         padding: 0;
         list-style: none;
-        z-index: 1000;
-    }
+        z-index: 100000000;
+
+       }
 
     .nav_links li {
         text-align: center;
@@ -247,6 +250,8 @@ header, nav, main, footer {
         border-radius: 15px;
 
         transform: translate(0, -5px);
+
+        z-index: 1000;
     }
 
     .smooth_line{
@@ -916,21 +921,20 @@ form button:hover {
 
 /* Stuff für Über Quokka*/
 .ueberquokka-container{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    padding: 50px;
 }
 
 .title-container {
-    padding: 30px; /* Innenabstand */
-    padding-bottom: 30px; /* Abstand von Passwort vergessen? zu rosa form*/
-    padding-top: 30px; /* Abstand von Login Titel auf Rosa Rand*/
-    width: 90%; /* Anpassbare Breite */
-    max-width: 600px; /* Maximale Breite */
-    text-align: center; /* Zentriert den Text */
-    margin: 20px auto;
-    position: relative;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 100%; /* Anpassbare Breite */
+    max-width: 500px; /* Maximale Breite */
+    text-align: center; /* Zentriert den Text */
 }
 
 .ueberquokka-title-image img {
@@ -942,9 +946,12 @@ form button:hover {
 
 .ueberquokka-intro-text{
     font-size: 1.8rem; /* Standard-Schriftgröße */
-    margin: 0 auto 40px; /* Abstand nach unten */
+    margin: auto;
+    margin-bottom: 30px;
+    margin-right: 20px; margin-left: 20px;
     line-height: 1.5; /* Angenehmer Zeilenabstand */
     text-align: center;
+    max-width: 800px;
 }
 
 .team-section {
@@ -952,45 +959,46 @@ form button:hover {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    margin: 20px;
 }
 
 .team-member {
+    margin: auto;
+
     position: relative;
-    width: calc(50% - 10px);
+    width: 100%;
     text-align: center;
     margin-bottom: 20px;
+
+    max-width: 700px;
 }
 
 .team-member img {
     width: 100%;
-    max-width: 100%;
-    display: block; 
-    border-radius: 10px;
     position: relative; /* Ermöglicht die Überlagerung durch die Icons */
     height: auto; /* Beibehaltung des Seitenverhältnisses */
 }
 
 .icons, .icons-left {
     position: absolute;
-    bottom: 15%; /* Fixierte Position relativ zum unteren Rand des Bildes */
-    transform: translateX(-50%);
-    display: flex;
+    width: 20%;
+    height: auto;
     gap: 10px;
-    margin-bottom: 18%;
 }
 
 .icons {
-    left: 60%;
+    transform: translate(270%, -600%);
 }
 
 .icons-left {
-    left: 45%;
+    transform: translate(180%, -600%);
+}
+
+.ammar_icons_fix {
+    margin-left: -10%;
 }
 
 .icons img, .icons-left img {
-    width: clamp(25px, 5vw, 50px); /* Dynamische Größenanpassung */
-    height: auto;
-    padding: 5px;
     transition: transform 0.2s; /* Animation beim Hover */
 }
 
@@ -999,7 +1007,7 @@ form button:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1500px) {
     .team-section {
         flex-direction: column;
     }
@@ -1010,8 +1018,7 @@ form button:hover {
     }
 
     .icons, .icons-left {
-        bottom: 10%;
-        margin-bottom: 22%;
+        display: flex;
     }
 }
 
@@ -1079,6 +1086,10 @@ form button:hover {
     .quote-text-ueberquokka {
         font-size: 2rem;
         line-height: 2.5rem;
+    }
+
+    .icons, .icons-left{
+        display: flex;    
     }
 }
 
@@ -2235,9 +2246,9 @@ form button:hover {
         background-repeat: no-repeat;
 
         position: relative;
-        max-width: 700px;
+        max-width: 600px;
         min-width: 500px;
-        max-height: 500px;
+        height: 350px;
     }
 
     .anb_reason_container_2{
@@ -2363,12 +2374,12 @@ form button:hover {
         margin: auto;
         position: relative;
         width: 100%;
-        min-height: 610px;
+        min-height: 530px;
 
         background-image: url(/img/formen/form-blau-3.png);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 1100px;
+        background-size: 950px;
         overflow: hidden;
     }
 
