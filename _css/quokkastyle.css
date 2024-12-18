@@ -470,7 +470,11 @@ main {
 }
 
 /*stuff für angebote*/
-
+.angebot img {
+    max-width: 100%;  /* Bild nimmt maximal 100% der Breite des Containers ein */
+    height: auto;     /* Höhe bleibt im Verhältnis zur Breite */
+    display: block;   /* Verhindert zusätzliche Abstände um das Bild */
+}
 .angebot_container{
     display: grid;
     gap: 10px;
@@ -539,22 +543,27 @@ main {
 .angebote_title {
     display: flex;
     justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren (falls nötig) */
-    margin-bottom: 1em; /* Abstand nach unten */
-    width: 300px;
+    align-items: center;     /* Vertikal zentrieren (falls nötig) */
+    margin-bottom: 1em;      /* Abstand nach unten */
+    width: 100%;             /* Stellen wir sicher, dass der Container die ganze Breite einnimmt */
+    max-width: 300px;        /* Maximalbreite für das Bild */
+    margin-left: auto;       /* Auto-Margin für Zentrierung */
+    margin-right: auto;      /* Auto-Margin für Zentrierung */
 }
 
 /* Intro-Text zentrieren und vergrößern */
 .angebote-intro-text {
-    text-align: center; /* Zentriert den Text */
-    font-size: 1.8rem; /* Schriftgröße anpassen */
-    font-weight: 600; /* Dickere Schrift */
-    margin-bottom: 2em; /* Abstand nach unten */
-    line-height: 1.5; /* Lesbarkeit verbessern */
+    font-size: 30px; 
+    margin: 0 auto 40px; /* Abstand nach unten */
+    line-height: 1.8; /* Angenehmer Zeilenabstand */
+    text-align: center;
 }
 /* Buttons */
 .button-container {
-    margin-top: 20px;
+    display: flex;          /* Wir nutzen Flexbox für die Zentrierung */
+    justify-content: center; /* Horizontale Zentrierung der Buttons */
+    gap: 20px;              /* Abstand zwischen den Buttons */
+    margin-top: 20px;        /* Abstand oben */
 }
 
 button {
@@ -579,6 +588,76 @@ button {
 
 .action-btn:hover {
     background-color:var(--darkred);
+}
+/* Hauptbereich für den Kurs */
+.kurs-info {
+    text-align: center;
+    padding: 20px;
+    font-family: "Kanit", sans-serif;
+    color: #444;
+    position: relative;
+}
+
+/* Optimierung des Kursbilds */
+.kurs-info img {
+    width: 100%; /* Füllt den Container */
+    max-width: 300px; /* Begrenzung der maximalen Breite */
+    height: auto; /* Verhindert Verzerrungen */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    display: block;
+    margin: 0 auto; /* Zentrierung */
+}
+
+/* Titel auf dem Bild */
+.kurs-info .title-overlay {
+    position: absolute;
+    top: 50%; /* Vertikale Zentrierung */
+    left: 50%; /* Horizontale Zentrierung */
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em; /* Angepasste Schriftgröße */
+    font-family: "agenda-one-condensed", sans-serif;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Leichter Schatten für bessere Lesbarkeit */
+    text-align: center;
+}
+
+/* Textbox für den restlichen Inhalt */
+.text-container {
+    background-color: rgba(255, 145, 77, 0.1); /* Transparente Hintergrundfarbe */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    margin: 20px auto; /* Zentriert die Box */
+    max-width: 600px; /* Begrenzung der Breite */
+    text-align: left; /* Text linksbündig */
+    color: #555;
+}
+
+/* Beschreibungstext */
+.text-container p {
+    font-size: 1em; /* Leicht kleinere Schriftgröße */
+    line-height: 1.6; /* Angenehmer Zeilenabstand */
+    margin: 15px 0;
+}
+
+/* Button für Anmeldung */
+.text-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff914d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.text-container a:hover {
+    background-color: #e05f2d; /* Dunklere Farbe beim Hover */
 }
 
 
