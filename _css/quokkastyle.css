@@ -922,7 +922,7 @@ form button:hover {
 /* Stuff für Über Quokka*/
 .ueberquokka-container{
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
 
 .title-container {
@@ -933,7 +933,7 @@ form button:hover {
     margin: auto;
     margin-bottom: 10px;
     width: 100%; /* Anpassbare Breite */
-    max-width: 500px; /* Maximale Breite */
+    max-width: 600px; /* Maximale Breite */
     text-align: center; /* Zentriert den Text */
 }
 
@@ -949,9 +949,8 @@ form button:hover {
     margin: auto;
     margin-bottom: 30px;
     margin-right: 20px; margin-left: 20px;
-    line-height: 1.5; /* Angenehmer Zeilenabstand */
+    line-height: 1.2; /* Angenehmer Zeilenabstand */
     text-align: center;
-    max-width: 800px;
 }
 
 .team-section {
@@ -1007,20 +1006,7 @@ form button:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 1500px) {
-    .team-section {
-        flex-direction: column;
-    }
 
-    .team-member {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .icons, .icons-left {
-        display: flex;
-    }
-}
 
 /* Zitat-Sektion Über Quokka*/
 .quote-section-ueberquokka {
@@ -1041,6 +1027,8 @@ form button:hover {
 
 .quote-background {
     position: relative;
+    max-width: 800px;
+    margin: auto;
 }
 
 .quote-background img {
@@ -1063,7 +1051,7 @@ form button:hover {
 }
 
 .quote-text-ueberquokka {
-    font-size: clamp(2rem, 2.5vw, 5rem); /* Dynamische Schriftgröße */
+    font-size: 35px; 
     font-weight: lighter;
     color: #333;
     position: absolute;
@@ -1071,8 +1059,9 @@ form button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    line-height: clamp(3rem, 2.5vw, 4rem); /* Dynamisches Zeilenverhältnis */
+    line-height: 1.2; 
     text-align: center;
+    max-width: 400px;
 }
 
 
@@ -1099,6 +1088,91 @@ form button:hover {
     margin-bottom: 20px; /* Abstand nach unten */
     justify-content: center;
 }
+
+@media (max-width: 500px) {
+
+    .icons, .icons-left {
+        width: 30%;
+    }
+
+    .icons{
+        transform: translate(180%, -450%);
+    }
+
+    .icons-left{
+        transform: translate(100%, -400%);
+    }
+
+    .ueberquokka-intro-text {
+        font-size: 25px;
+    }
+
+    .quote-text-ueberquokka{
+        font-size: 30px;
+        max-width: 300px;
+        margin-top: 10px;
+
+    }
+}
+
+@media (max-width: 440px) {
+
+    .ueberquokka-intro-text {
+font-size: 22px;
+    }
+
+    .quote-text-ueberquokka {
+        font-size: 25px; 
+        max-width: 300px;
+        margin-top: 10px;
+    }
+
+    .quote-title {
+        font-size: 35px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1500px) {        /*für breietere screens*/
+    .team-section {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .icons, .icons-left {
+        display: flex;
+    }
+
+}
+
+@media (min-width: 1500px) {
+
+    .quote-section-ueberquokka {
+        min-width: 1500px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .icons, .icons-left {
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .icons {
+        transform: translate(220%, -500%);
+    }
+
+    .icons-left {
+        transform: translate(120%, -500%);
+    }
+
+}
+
 
 
 /*stuff für community*/
