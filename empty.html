@@ -37,7 +37,7 @@
                 <li><a href="/index.html">Quokka Home</a></li>
                 <li><a href="/angebote.html">Angebote</a></li>
                 <li><a href="/community.html">Community</a></li>
-                <li><a class="aktiver_menulink" href="/merch.html">Merchandise</a></li>
+                <li><a href="/merch.html">Merchandise</a></li>
                 <li><a href="/ueber-quokka.html">Über Quokka</a></li>
                     <div class="nav_extras">
                         <a href="search.html" class="grey_bg"><img src="img/icons8-search-90.png" width="45px" height="45px"> Suche</a><br>
@@ -47,48 +47,21 @@
         </nav>
     
     </header>
-
+ 
     <main>
-        <div class="store_page">
-            <div class="store_item">
-                <img src="/img/merch/cooldown-v2.png" alt="shirt 1">
+        <div class="empty_page">
+            <h1 class="empty_title">Hoppla!</h1>
+            <p class="empty_text">Auf dieser Seite wäre ein Feature, das wir momentan noch nicht hinzufügen können. 
+                Gerne kannst du zurück zur Homepage und dort weiterstöbern.</p>
 
-                <div class="store_content">
+            <form action="/index.html" method="get">
 
-                    <div class="store_title">
-                        <h1>Quokka "Cool Down" T-Shirt</h1>
-                        <h2 style="margin-top: -1em;">CHF 30.-</h2>
-                    </div>
+                <button type="submit" class="empty_button">
+                    Zurück zur Homepage
+                </button>
 
-                    <div class="store_text">
-                        Bleib cool, egal wo du bist - mit unserem "Cool Down" T-Shirt! 
-                        Das liebevoll gestaltete Design zeigt ein süsses Quokka, das in einem Eiswürfel chillt. 
-                        Dieses Motiv bringt nicht nur ein Lächeln auf dein Gesicht, sondern auch pure Feel-Good-Vibes in deinen Alltag. 
-                        Hergestellt aus weicher, hochwertiger Baumwolle, bietet das Shirt ultimativen Tragekomfort und 
-                        ist perfekt für entspannte Tage, heisse Sommertage oder einfach zum Wohlfühlen. 
-                        Ob für dich selbst oder als Geschenk - dieses T-Shirt wird Herzen schmelzen (auch wenn das Quokka cool bleibt).
-                    </div>
-
-                    <form action="/empty.html" method="get" class="store_interact">
-
-                        <div class="store_dropdown">
-                            <label for="store_select">Wähle deine Grösse aus</label>
-                            <select name="store" id="store_select">
-                                <option value="small">S</option>
-                                <option value="medium">M</option>
-                                <option value="large">L</option>
-                                <option value="xlarge">XL</option>
-                            </select>
-                        </div>
-
-                        <button type="submit" class="store_button">
-                            In den Warenkorb
-                        </button>
-
-                    </form>
-                </div>
-            </div>
-        </div>  
+            </form>
+        </div>
     </main>
 
     <footer>

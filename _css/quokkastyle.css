@@ -2658,3 +2658,37 @@ font-size: 22px;
     background-color: var(--grey_mid);
     border-radius: 10px;
 }
+
+
+/*leere seite für alles was nicht wirklich existiert*/
+.empty_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 700px;
+    min-height: 500px;
+    text-align: center;
+    padding: 40px;
+
+    background-image: url(/img/formen/form-gelb-5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 700px;
+    overflow: hidden;
+}
+
+.empty_text{
+    font-size: 28px;
+    max-width: 500px;
+}
+
+.empty_title{
+    font-size: 60px;
+}
+
+.empty_button{
+    padding: 15px;
+}
