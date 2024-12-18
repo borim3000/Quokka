@@ -552,17 +552,17 @@ button {
 }
 
 .filter-btn {
-    background-color: #7d7d7d;
+    background-color: var(--grey_mid);
     color: #fff;
 }
 
 .action-btn {
-    background-color: #6d1f1f;
+    background-color:var(--darkred);
     color: #fff;
 }
 
 .action-btn:hover {
-    background-color: #8b2727;
+    background-color:var(--darkred);
 }
 
 /*stuff für merch*/
