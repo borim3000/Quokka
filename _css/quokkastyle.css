@@ -274,7 +274,7 @@ header, nav, main, footer {
 
         margin-top: 30px;
         font-size: 30px;
-        line-height: 2;
+        line-height: 0.5;
 
     }
 
@@ -285,8 +285,8 @@ header, nav, main, footer {
     .grey_bg{
         background-color: var(--grey_mid);
         border-radius: 15px;
-        padding-top: 5px;
         padding-left: 40px; padding-right: 40px;
+        padding-bottom: 25px;
     }
 
     .menu_icons{
