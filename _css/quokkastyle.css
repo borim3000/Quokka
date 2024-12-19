@@ -1461,25 +1461,28 @@ font-size: 22px;
     .community-intro-text{
         font-size: 30px; 
         margin: 0 auto 40px; /* Abstand nach unten */
-        line-height: 1.8; /* Angenehmer Zeilenabstand */
+        padding: 0 20px;
+        line-height: 1.2; /* Angenehmer Zeilenabstand */
         text-align: center;
+        max-width: 800px;
     }
 
     .quotes-section {
-        padding: 50px 20px;
+        padding: 20px 0;
       }
 
       .quote-container {
         text-align: center;
         max-width: 600px;
-        line-height: 1.6;
-        margin: 40px auto;
-        padding: 100px;
-        background-size: 120%; 
+        line-height: 1.4;
+        margin: auto;
+        padding: 50px 10px;
+        background-size: 100%; 
         background-position: center; /* Zentriert die Form */
         background-repeat: no-repeat;
         position: relative;
         min-height: 250px;
+
         }
 
 
@@ -1488,20 +1491,22 @@ font-size: 22px;
     }
       
       .quote {
-        font-size: 70px;
         font-size: 24px;
         font-style: italic;
         position: relative;
         z-index: 2; /* Text liegt über dem Hintergrundbild */
+
+        transform: translate(0px, 40px);
       }
       
       .author {
-        font-size: 50px; 
         margin-top: 10px;
         font-size: 18px;
         position: relative;
         z-index: 2; /* Text liegt über dem Hintergrundbild */
-      }
+
+        transform: translate(0px, 40px);
+    }
 
       .quote-container::before {
         content: "";
@@ -1529,14 +1534,13 @@ font-size: 22px;
     }
 
       .quote-container:nth-child(odd) {
-        background-image: url('../img/community/rot-form.png'); /* Roter Hintergrund */
-        background-size: 60%; /* Vergrößert die Form auf 60% ihrer Originalgröße */
-       
+        background-image: url('../img/formen/form_blau_2.png'); /* Roter Hintergrund */
+        background-size: 600px; /* Vergrößert die Form auf 60% ihrer Originalgröße */
     }
     
     .quote-container:nth-child(even) {
-        background-image: url('../img/community/blau-form.png'); /* Blauer Hintergrund */
-        background-size: 60%; /* Vergrößert die Form auf 60% ihrer Originalgröße */
+        background-image: url('../img/formen/form-gelb-3.png'); /* Blauer Hintergrund */
+        background-size: 600px; /* Vergrößert die Form auf 60% ihrer Originalgröße */
 
     }
 
@@ -1679,6 +1683,13 @@ font-size: 22px;
 .action-button:hover {
     transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
 }
+
+@media (max-width: 480px){
+    .action-button-container{
+        flex-direction: column;
+    }
+}
+
 
 /*SEARCH PAGE*/
 
