@@ -46,20 +46,24 @@
 
     </header>
 
-    <main class="angebot_container" style="background-color: white;">
+    <main class="angebot_container">
         <!-- Angebote Title Bild oben in der Mitte -->
         <div class="angebote_title">
             <img src="img/angebot/Angebot_title.png" >
         </div>
         
+        <div class="line_grey"></div>
+
         <p class="angebote-intro-text">
             Finde hier deinen Ausgleich zum Arbeitsleben oder Studium! Nutze unsere Filteroptionen für deinen perfekten Match.
         </p> 
-        <div class="button-container">
-            <button class="filter-btn">Filter</button>
-            <button class="action-btn swipe-btn">Swipe</button>
-            <button class="action-btn zufall-btn">Zufall</button>
-        </div>
+
+        <form action="empty.html" method="get" class="button-container">
+            <button type="submit" class="filter-btn">Filter</button>
+            <button type="submit" class="action-btn swipe-btn">Swipe</button>
+            <button type="submit" class="action-btn zufall-btn">Zufall</button>
+        </form>
+        
         <div class="angebot_container">
             <a href="/angebote/kurs1.html">
                 <div class="angebot" style="background-image: url(/img/angebot/high-angle-artisan-doing-pottery-studio.jpg);">
@@ -93,6 +97,22 @@
                 </div>
             </a>
         </div>
+
+        <div class="anb_anmelden">
+
+            <div class="anb_text">
+                <h2>Du möchtest deinen Kurs auf Quokka anbieten?</h2>
+                <p>Kontaktiere uns und wir nehmen deinen Kurs im Quokka-Angebot auf!</p>
+            </div>
+
+            <form action="/anbieter-werden.html" method="get">
+                <button type="submit">
+                    Anbieter werden
+                </button>
+            </form>
+
+        </div>
+
     </main>
 
     <footer>
@@ -102,6 +122,7 @@
             <div>
                 <div class="quokka_social">
                     <img src="/img/formen/form_blau_2.png" alt="quokkaform">
+                        
                 </div>
 
                 <div class="social_icons">
@@ -113,8 +134,8 @@
 
             <div>
                 <div class="footer_links">
-                    <a href="mailto:info@quokka.ch">&#9993 info@quokka.ch</a>
-                    <a href="">&#128381 079 123 45 67</a>
+                    <a href="mailto:info@quokka.ch"><img src="/img/ueberquokka/email-icon.png" alt="mail-icon">info@quokka.ch</a>
+                    <a href=""><img src="/img/ueberquokka/phone-icon.png" alt="phone-icon">079 123 45 67</a>
                 </div>
             </div>
         </div>

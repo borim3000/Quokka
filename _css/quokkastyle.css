@@ -6,6 +6,7 @@
     --turqoise: rgb(234, 255, 248);
     --turqoise_t: rgba(234, 255, 248, 0.7);
     --grey: rgb(81, 81, 81);
+    --grey_dark: rgb(45, 45, 45);
     --grey_mid: rgb(200, 200, 200);
     --grey_low: rgb(240, 240, 240);
     --orange: rgb(246, 198, 96);
@@ -477,38 +478,69 @@ main {
 }
 .angebot_container{
     display: grid;
+    justify-content: center;
+    margin: auto;
     gap: 10px;
-    padding: 2em;
+    max-width: 1300px;
+    position: relative;
+    margin-bottom: 30px;
 }
 
 .angebot{
     display: block;
     padding: 2em;
     border-radius: 10px;
-    background-color: var(--blue);
-    font-family: "Kanit"; 
     font-weight:600;
     background-image: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
     transition: height 0.7s cubic-bezier(.87, -0.2, .05, 1), filter .3s linear;
-    overflow: hidden;
-    height: 80px;
+    height: 200px;
 }
 
 .angebot:hover {
-    height: 180px;
+    height: 300px;
     transition: height 0.7s cubic-bezier(.87, -0.2, .05, 1);
 }
 
+@media (max-width: 1024px){
+    .angebot_container{
+        max-width: 750px;
+    }
+
+    .angebot{
+        margin-left: 20px; margin-right: 20px;
+    }
+    
+   .angebote_title{
+        margin-top: 50px;
+   }
+}
+
+@media(max-width: 650px){
+    .angebote-intro-text{
+        max-width: 450px !important;
+    }
+
+    .button-container{
+        flex-direction: column;
+        max-width: 200px;
+        gap: 0px !important;
+    }
+
+    .filter-btn, .action-btn{
+        margin-top: 0px;
+    }
+
+}
 
 /*text auf angebot buttons*/
 
 .marker, .mini_marker{
     display: inline-block;
-    background-color: var(--black_t);
-    color: white;
+    background-color: var(--turqoise_t);
+    color: var(--grey_dark);
     padding: 3px 10px;
     border-radius: 4px;
     position: relative;
@@ -520,7 +552,6 @@ main {
     top: -20px;
     left: -20px;
     font-size: 30px;
-    font-family: "agenda-one-condensed";
     font-weight: 600;
     line-height: 1.1;
 }
@@ -532,7 +563,6 @@ main {
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: "agenda-one-condensed";
     font-weight: 400;
     line-height: 0.9;
 }
@@ -544,7 +574,6 @@ main {
     display: flex;
     justify-content: center; /* Horizontal zentrieren */
     align-items: center;     /* Vertikal zentrieren (falls nötig) */
-    margin-bottom: 1em;      /* Abstand nach unten */
     width: 100%;             /* Stellen wir sicher, dass der Container die ganze Breite einnimmt */
     max-width: 300px;        /* Maximalbreite für das Bild */
     margin-left: auto;       /* Auto-Margin für Zentrierung */
@@ -554,9 +583,10 @@ main {
 /* Intro-Text zentrieren und vergrößern */
 .angebote-intro-text {
     font-size: 30px; 
-    margin: 0 auto 40px; /* Abstand nach unten */
-    line-height: 1.8; /* Angenehmer Zeilenabstand */
+    margin: 0 auto 10px; /* Abstand nach unten */
+    line-height: 1.2; /* Angenehmer Zeilenabstand */
     text-align: center;
+    max-width: 650px;
 }
 /* Buttons */
 .button-container {
@@ -564,6 +594,8 @@ main {
     justify-content: center; /* Horizontale Zentrierung der Buttons */
     gap: 20px;              /* Abstand zwischen den Buttons */
     margin-top: 20px;        /* Abstand oben */
+    width: 600px;
+    margin: auto;
 }
 
 button {
@@ -574,39 +606,43 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: var(--darkred);
 }
 
 .filter-btn {
-    background-color: var(--grey_mid);
+    background-color: var(--grey);
     color: #fff;
+    font-weight: 600;
+    font-size: 23px;
 }
 
 .action-btn {
     background-color:var(--darkred);
     color: #fff;
+    font-weight: 600;
+    font-size: 23px;
 }
 
-.action-btn:hover {
-    background-color:var(--darkred);
-}
+
 /* Hauptbereich für den Kurs */
 .kurs-info {
     text-align: center;
     padding: 20px;
     font-family: "Kanit", sans-serif;
-    color: #444;
+    color: var(--grey_dark);
     position: relative;
 }
 
+
 /* Optimierung des Kursbilds */
 .kurs-info img {
-    width: 70%; /* Füllt den Container */
-    max-width: 300px; /* Begrenzung der maximalen Breite */
-    height: auto; /* Verhindert Verzerrungen */
+    object-fit: cover;
+    max-height: 300px; /* Verhindert Verzerrungen */
     border-radius: 15px; /* Abgerundete Ecken */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
     display: block;
     margin: 0 auto; /* Zentrierung */
+    margin-top: 30px;
 }
 
 /* Titel auf dem Bild */
@@ -620,6 +656,8 @@ button {
     font-family: "agenda-one-condensed", sans-serif;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Leichter Schatten für bessere Lesbarkeit */
     text-align: center;
+    margin-top: auto;
+
 }
 
 /* Textbox für den restlichen Inhalt */
@@ -631,19 +669,24 @@ button {
     margin: 20px auto; /* Zentriert die Box */
     max-width: 600px; /* Begrenzung der Breite */
     text-align: left; /* Text linksbündig */
-    color: #555;
+    color: var(--grey);
+
+    font-family: "agenda-one-condensed", sans-serif;
 }
 
 /* Beschreibungstext */
 .text-container p {
-    font-size: 1em; /* Leicht kleinere Schriftgröße */
-    line-height: 1.6; /* Angenehmer Zeilenabstand */
+    font-size: 24px; /* Leicht kleinere Schriftgröße */
+    line-height: 1.2; /* Angenehmer Zeilenabstand */
     margin: 15px 0;
+    
 }
+
 
 /* Button für Anmeldung */
 .text-container a {
-    display: inline-block;
+    display: block;
+    justify-content: center;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: var(--darkred);
@@ -654,12 +697,48 @@ button {
     font-size: 1.1em;
     transition: background-color 0.3s ease;
     text-align: center;
+    margin: auto;
+    width: 200px;
 }
 
 .text-container a:hover {
-    background-color: #e05f2d; /* Dunklere Farbe beim Hover */
+    background-color: #e05f2d; 
 }
 
+@media(min-width: 1024px){
+    .kurs-info img{
+        width: 85%;
+    }
+}
+
+@media(max-width: 1024px){
+    .kurs-info img{
+        margin-top: 50px;
+        width: 660px;
+    }
+}
+
+.anb_anmelden{          /*anbieter werden unter den angeboten*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px; margin-bottom: 10px;
+    height: 300px;
+
+    background-image: url(/img/formen/form_blau_2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 550px;
+    overflow: hidden;
+    
+}
+
+.anb_text {
+    text-align: center;
+    margin-left: 30px; margin-right: 30px;
+}
 
 
 /*stuff für merch*/
