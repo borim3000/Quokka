@@ -600,10 +600,10 @@ button {
 
 /* Optimierung des Kursbilds */
 .kurs-info img {
-    width: 100%; /* Füllt den Container */
+    width: 70%; /* Füllt den Container */
     max-width: 300px; /* Begrenzung der maximalen Breite */
     height: auto; /* Verhindert Verzerrungen */
-    border-radius: 10px; /* Abgerundete Ecken */
+    border-radius: 15px; /* Abgerundete Ecken */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
     display: block;
     margin: 0 auto; /* Zentrierung */
@@ -624,7 +624,7 @@ button {
 
 /* Textbox für den restlichen Inhalt */
 .text-container {
-    background-color: rgba(255, 145, 77, 0.1); /* Transparente Hintergrundfarbe */
+    background-color:var(--blue); /* Transparente Hintergrundfarbe */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
@@ -646,7 +646,7 @@ button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ff914d;
+    background-color: var(--darkred);
     color: white;
     text-decoration: none;
     border-radius: 5px;
